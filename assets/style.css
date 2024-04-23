@@ -1,0 +1,38 @@
+:root {
+
+    /**** COLORS ****/
+    
+    --main-color: #F6F6F6;
+    --body-bg-and-footer-font-color: #FFFFFF;
+    --location-bg-color: #EAEAEA;
+    --button-color: linear-gradient(#9356DC, #FF79DA);
+    --ellipse-color: #9356DC;
+    --icone-color: #7E7E7E;
+    --line-title-color: #99E2D0;
+    
+    /** color for the footer bg, price, icone back  **/
+    --footer-and-co-color: #353535;
+    
+    /** color for the title  **/
+    --main-title-font-color: #000000;
+    --secondary-title-color: #101010;
+
+    /**** TEXT CONFIGURATION  ****/
+
+    --homepage-h1-and-h2-size: 24px;
+    --homepage-h1-and-h2-weight: 700;   
+    
+
+
+
+    /** size and weight for the strong paragraph **/
+    --strong-text-font-size: 16px;
+    --strong-text-font-weight: 500;
+   
+    
+}
+
+body {
+    font-family: 'Roboto' sans-serif;
+}
+
