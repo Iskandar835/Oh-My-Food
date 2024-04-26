@@ -1,0 +1,328 @@
+@import './_variables';
+@import './_mixins';
+@import './_placeholder';
+@import './_variables';
+
+
+//**** GENERAL ****
+
+body {
+    font-family: "roboto", sans-serif;
+    margin: 0;
+    color: $body-font-color;
+}
+
+h1, h2 {
+    font-size: $homepage-h1-and-h2-size;
+    font-weight: $homepage-h1-and-h2-weight;
+}
+
+h3 {
+    margin: 0;
+    font-size: $card-title-font-size;
+    font-weight: $card-title-font-weight;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+//**** HEADER ****
+
+.header {
+    position: relative;
+    z-index: 2;
+   @include flexMiddle;
+    height: 63px;
+     &__logo {
+        width: 162px;
+        height: 44px;
+     }
+}
+
+
+//**** SEARCH SECTION ****
+
+
+.location-city {
+    position: relative;
+    z-index: 1;
+    @include flexMiddle;
+    gap: 17px;
+    background-color: $location-bg-color;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.445), inset 0 10px 5px -20px rgba(0, 0, 0, 0.288),/* Ombre sur le haut et le bas */
+}
+
+.explore-restaurants {
+    background-color: $main-color;
+    text-align: center;
+    padding: 10px;
+
+    h1 {
+        margin: 25px 35px;
+    }
+    p {
+        margin: 0 10px 35px 10px;
+        font-size: 18px;
+        font-weight: 300;
+        color: $footer-and-co-color;
+    }
+}
+
+
+//**** FONCTIONNEMENT SECTION ****
+
+.fonctionnement {
+    padding: 50px 20px 70px 20px;
+    h2 {
+        margin: 0 0 30px 0;
+    }
+    @media (min-width: 769px) {
+        padding: 50px 180px 50px 180px;
+    }
+}
+
+.fonctionnement__cards-gang {
+    @include flexColumn;
+    margin-left: 13px;
+    gap: 23px;
+    @media (min-width: 769px) {
+        @include flexRow;
+        gap: 40px;
+    }
+}
+
+.fonctionnement__cards {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 73px;
+    gap: 10px;
+    background-color: $main-color;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.144);
+    
+    &-pellet {
+        position: relative;
+        @include flexMiddle;
+        min-width: 25px;
+        height: 25px;
+        right: 12px;
+        background-color: $primary-color;
+        border-radius: 50px;
+        font-size: 14px;
+        color: $body-bg-and-footer-font-color;
+    }
+
+    &-content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        i {
+            color: $icone-color;
+        }
+        p {
+            font-weight: 500;
+        }
+    }
+}
+
+.fonctionnement__icon {
+    width: 40px;
+    font-size: 18px;
+    .fonctionnement__cards:hover & i {
+        color: $primary-color;
+    }
+}
+
+
+/**** RESTAURANTS ****/
+
+.new-restaurant {
+    @include flexMiddle;
+    position: absolute;
+    z-index: 1;
+    width: 80px;
+    height: 29px;
+    margin: 12px;
+    border-radius: 2px;
+    background-color: $tertiary-color;
+    p {
+        font-size: 14px;
+        font-weight: 500;
+        color: $nouveau-font-color;
+    }
+    &-and-card {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+}
+
+.restaurants {
+    padding: 35px 20px 65px 20px;
+    background-color: $main-color;
+    &-cards-gang {
+        @include flexColumn;
+        gap: 18px;
+    }
+}
+
+.first-restaurants-row,
+.second-restaurants-row {
+   @include flexColumn;
+    gap: 18px;
+}
+
+.restaurants-card {
+    position: relative;
+    width: 100%;
+    height: 251px;
+    border-radius: 15px;
+    background-color: $body-bg-and-footer-font-color;
+
+    img {
+        width: 100%;
+        height: 70%;
+        object-fit: cover;
+        border-radius: 15px 15px 0 0;
+    }
+
+    .card-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 25px 8px 12px;
+    }
+
+    .card-text {
+        @include flexColumn;
+        gap: 3px;
+        color: $body-font-color;
+
+        p {
+            margin: 0;
+            font-size: $card-subtitle-font-size;
+            font-weight: $card-subtitle-font-weight;  
+        }
+    }
+}
+
+// .restaurants-card {
+//     width: 100%;
+//     height: 251px;
+//     border-radius: 15px;
+//     background-color: $body-bg-and-footer-font-color;
+// }
+
+// .restaurants-card img {
+//     width: 100%;
+//     height: 70%;
+//     object-fit: cover;
+//     border-radius: 15px 15px 0 0;
+// }
+
+// .restaurants-card .card-content {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     padding: 10px 25px 8px 12px;
+// }
+
+// .restaurants-card .card-text {
+//     display: flex;
+//     flex-direction: column;
+//     gap: 3px;
+//     color: $body-font-color;
+// }
+
+// .restaurants-card p  {
+//     margin: 0;
+//     font-size: $card-subtitle-font-size;
+//     font-weight: $card-subtitle-font-weight;  
+// }
+
+.heart-card {
+    /* elle est bien positionner revnir dessus par rapport a l'animation  */
+    color: $secondary-color-title;
+    font-size: 20px;
+    /* ***************************** */
+}
+/* ********************************************* */
+
+/**** FOOTER  ****/
+
+footer {
+    padding: 25px;
+    color: $body-bg-and-footer-font-color;
+    background-color: $footer-and-co-color;
+}
+
+footer a {
+    color: $body-bg-and-footer-font-color;
+}
+
+.footer-title {
+    margin-top: 0;
+    font-family: "shrikhand", sans-serif;
+    font-size: $footer-title-font-size;
+}
+
+.propose-and-become-link,
+.mention-and-contact-link {
+    @include flexColumn;
+    list-style-type: none;
+    margin: 8px 0 0 0;
+    padding: 0;
+    gap: 8px;
+}
+
+.link-with-icon {
+    display: flex;
+    align-items: center;
+    font-size: $footer-subtitle-font-size;
+    font-weight: 500;
+}
+
+.link-icon {
+    width: 25px;
+    font-size: 13px;
+}
+
+.link-without-icon {
+    font-size: $footer-subtitle-font-size;
+    font-weight: 400;
+}
+
+@media (min-width: 769px) and (max-width: 1440px) {
+
+    /**** FOOTER ****/
+
+    footer {
+        padding: 60px 60px 30px 60px;
+    }
+
+    .footer-content {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 90px;
+    }
+
+    .footer-title {
+        margin-bottom: 0;
+    }
+
+    .footer-only-responsive {
+        display: flex;
+        gap: 45px;
+    }
+    
+    .propose-and-become-link,
+    .mention-and-contact-link {
+        flex-direction: row;
+        gap: 15px;
+    }
+    
+}
+
