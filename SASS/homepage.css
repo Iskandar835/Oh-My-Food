@@ -46,7 +46,11 @@ a {
   align-items: center;
   gap: 17px;
   background-color: #EAEAEA;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.445), inset 0 10px 5px -20px rgba(0, 0, 0, 0.288);
+  box-shadow: inset 0 6px 5px -5px rgba(0, 0, 0, 0.205), 0 4px 4px rgba(0, 0, 0, 0.205);
+  color: #353535;
+}
+.location-city p {
+  font-weight: 500;
 }
 
 .explore-restaurants {
@@ -55,13 +59,35 @@ a {
   padding: 10px;
 }
 .explore-restaurants h1 {
-  margin: 25px 35px;
+  margin: 25px 35px 15px 35px;
 }
 .explore-restaurants p {
-  margin: 0 10px 35px 10px;
+  margin: 0 10px;
   font-size: 18px;
   font-weight: 300;
   color: #353535;
+}
+
+.btn {
+  width: 188px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: white;
+  padding: 16px;
+  font-weight: 500;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: opacity 0.5s ease, box-shadow 0.5s ease;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+.btn:hover {
+  opacity: 0.8;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.explore-restaurants-button {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0 45px 0;
 }
 
 .fonctionnement {
@@ -70,24 +96,12 @@ a {
 .fonctionnement h2 {
   margin: 0 0 30px 0;
 }
-@media (min-width: 769px) {
-  .fonctionnement {
-    padding: 50px 180px 50px 180px;
-  }
-}
 
 .fonctionnement__cards-gang {
   display: flex;
   flex-direction: column;
   margin-left: 13px;
   gap: 23px;
-}
-@media (min-width: 769px) {
-  .fonctionnement__cards-gang {
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
-  }
 }
 
 .fonctionnement__cards {
@@ -206,20 +220,31 @@ a {
 }
 
 .heart-card {
-  /* elle est bien positionner revnir dessus par rapport a l'animation  */
+  margin: 0 25px 30px 0;
+}
+.heart-card i {
+  position: absolute;
+  font-size: 26px;
   color: #101010;
-  font-size: 20px;
-  /* ***************************** */
 }
 
-/* ********************************************* */
+.full-heart {
+  opacity: 0;
+}
+.full-heart:hover {
+  opacity: 1;
+  color: transparent;
+  background: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
 /**** FOOTER  ****/
 footer {
   padding: 25px;
   color: #FFFFFF;
   background-color: #353535;
 }
-
 footer a {
   color: #FFFFFF;
 }
@@ -257,8 +282,49 @@ footer a {
   font-weight: 400;
 }
 
-@media (min-width: 769px) and (max-width: 1440px) {
-  /**** FOOTER ****/
+@media (min-width: 769px) {
+  .header {
+    height: 95px;
+  }
+  .header__logo {
+    width: 200px;
+  }
+  .explore-restaurants h1 {
+    margin: 20px 35px 30px 35px;
+    font-size: 40px;
+  }
+  .explore-restaurants-button {
+    margin: 30px 0 20px 0;
+  }
+  .location-city {
+    box-shadow: none;
+  }
+  .fonctionnement {
+    padding: 50px 180px 50px 180px;
+  }
+  .fonctionnement__cards-gang {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+  }
+  .restaurants {
+    padding: 10px 175px 30px 175px;
+  }
+  .restaurants h2 {
+    margin-bottom: 28px;
+  }
+  .restaurants-cards-gang {
+    display: flex;
+    gap: 50px;
+  }
+  .first-restaurants-row,
+  .second-restaurants-row {
+    flex-direction: row;
+    gap: 100px;
+  }
+  .card-link {
+    width: 50%;
+  }
   footer {
     padding: 60px 60px 30px 60px;
   }

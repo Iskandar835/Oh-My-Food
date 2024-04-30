@@ -2,6 +2,7 @@
 @import './_mixins';
 @import './_placeholder';
 @import './_variables';
+@import './_animations';
 
 
 //**** GENERAL ****
@@ -44,30 +45,42 @@ a {
 
 //**** SEARCH SECTION ****
 
-
 .location-city {
     position: relative;
     z-index: 1;
     @include flexMiddle;
     gap: 17px;
     background-color: $location-bg-color;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.445), inset 0 10px 5px -20px rgba(0, 0, 0, 0.288),/* Ombre sur le haut et le bas */
+    box-shadow:  inset 0 6px 5px -5px rgba(0, 0, 0, 0.205), 0 4px 4px rgba(0, 0, 0, 0.205);
+    color: $footer-and-co-color;
+    & p {
+        font-weight: 500;
+    }
 }
 
 .explore-restaurants {
     background-color: $main-color;
     text-align: center;
     padding: 10px;
-
     h1 {
-        margin: 25px 35px;
+        margin: 25px 35px 15px 35px;
     }
     p {
-        margin: 0 10px 35px 10px;
+        margin: 0 10px;
         font-size: 18px;
         font-weight: 300;
         color: $footer-and-co-color;
     }
+}
+
+.btn {
+   @include button;
+}
+  
+.explore-restaurants-button {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0 45px 0;
 }
 
 
@@ -78,19 +91,12 @@ a {
     h2 {
         margin: 0 0 30px 0;
     }
-    @media (min-width: 769px) {
-        padding: 50px 180px 50px 180px;
-    }
 }
 
 .fonctionnement__cards-gang {
     @include flexColumn;
     margin-left: 13px;
     gap: 23px;
-    @media (min-width: 769px) {
-        @include flexRow;
-        gap: 40px;
-    }
 }
 
 .fonctionnement__cards {
@@ -102,7 +108,6 @@ a {
     background-color: $main-color;
     border-radius: 15px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.144);
-    
     &-pellet {
         position: relative;
         @include flexMiddle;
@@ -114,7 +119,6 @@ a {
         font-size: 14px;
         color: $body-bg-and-footer-font-color;
     }
-
     &-content {
         display: flex;
         flex-direction: row;
@@ -180,26 +184,22 @@ a {
     height: 251px;
     border-radius: 15px;
     background-color: $body-bg-and-footer-font-color;
-
     img {
         width: 100%;
         height: 70%;
         object-fit: cover;
         border-radius: 15px 15px 0 0;
     }
-
     .card-content {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 10px 25px 8px 12px;
     }
-
     .card-text {
         @include flexColumn;
         gap: 3px;
         color: $body-font-color;
-
         p {
             margin: 0;
             font-size: $card-subtitle-font-size;
@@ -208,47 +208,19 @@ a {
     }
 }
 
-// .restaurants-card {
-//     width: 100%;
-//     height: 251px;
-//     border-radius: 15px;
-//     background-color: $body-bg-and-footer-font-color;
-// }
-
-// .restaurants-card img {
-//     width: 100%;
-//     height: 70%;
-//     object-fit: cover;
-//     border-radius: 15px 15px 0 0;
-// }
-
-// .restaurants-card .card-content {
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center;
-//     padding: 10px 25px 8px 12px;
-// }
-
-// .restaurants-card .card-text {
-//     display: flex;
-//     flex-direction: column;
-//     gap: 3px;
-//     color: $body-font-color;
-// }
-
-// .restaurants-card p  {
-//     margin: 0;
-//     font-size: $card-subtitle-font-size;
-//     font-weight: $card-subtitle-font-weight;  
-// }
-
 .heart-card {
-    /* elle est bien positionner revnir dessus par rapport a l'animation  */
-    color: $secondary-color-title;
-    font-size: 20px;
-    /* ***************************** */
+    margin: 0 25px 30px 0;
+    i {
+        position: absolute;
+        font-size: 26px;
+        color: $secondary-color-title;
+    }
 }
-/* ********************************************* */
+
+.full-heart {
+   @include heartButton;
+}
+
 
 /**** FOOTER  ****/
 
@@ -256,10 +228,9 @@ footer {
     padding: 25px;
     color: $body-bg-and-footer-font-color;
     background-color: $footer-and-co-color;
-}
-
-footer a {
-    color: $body-bg-and-footer-font-color;
+    a {
+        color: $body-bg-and-footer-font-color;
+    }
 }
 
 .footer-title {
@@ -294,9 +265,77 @@ footer a {
     font-weight: 400;
 }
 
-@media (min-width: 769px) and (max-width: 1440px) {
 
-    /**** FOOTER ****/
+//******* MEDIA QUERIES FOR DESKTOP *******
+@media (min-width: 769px) {
+
+
+    //**** HEADER **** 
+    
+    .header {
+        height: 95px;
+    }
+    
+    .header__logo {
+        width: 200px;
+    }
+    
+
+    //**** SEARCH SECTION ****
+    
+    .explore-restaurants h1 {
+        margin: 20px 35px 30px 35px;
+        font-size: 40px;
+    }
+    
+    .explore-restaurants-button {
+        margin: 30px 0 20px 0;
+    }
+    
+    .location-city {
+        box-shadow: none;
+    }
+    
+    
+    //**** FONCTIONNEMENT ****
+    
+    .fonctionnement {
+        padding: 50px 180px 50px 180px;
+    }
+
+    .fonctionnement__cards-gang {
+        @include flexRow;
+        gap: 40px;
+    }
+
+
+    //**** RESTAURANTS ****
+
+    .restaurants {
+        padding: 10px 175px 30px 175px;
+    }
+        
+    .restaurants h2 {
+        margin-bottom: 28px;
+    }
+    
+    .restaurants-cards-gang {
+        display: flex;
+        gap: 50px;
+    }
+        
+    .first-restaurants-row,
+    .second-restaurants-row {
+        flex-direction: row;
+        gap: 100px;
+    }
+        
+    .card-link {
+        width: 50%;
+    }
+
+
+    //**** FOOTER ****
 
     footer {
         padding: 60px 60px 30px 60px;
@@ -323,6 +362,4 @@ footer a {
         flex-direction: row;
         gap: 15px;
     }
-    
 }
-

@@ -32,7 +32,9 @@
             <div class="explore-restaurants">
                 <h1>Réservez le menu qui vous convient</h1>
                 <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-                <a class="btn" href="#ancor1">Explorer nos restaurants</a>
+                <div class="explore-restaurants-button">
+                    <a class="btn" href="#ancor1">Explorer nos restaurants</a>
+                </div>
             </div>
         </section>
         <section class="fonctionnement">
@@ -69,9 +71,9 @@
         </section>
         <section class="restaurants">
             <h2 id="ancor1">Restaurants</h2>
-            <div class="restaurants-cards-gang"> <!-- peut etre -->
+            <div class="restaurants-cards-gang">
                 <div class="first-restaurants-row">
-                    <a href="restaurants/la-palette-du-gout.html" class="">
+                    <a href="restaurants/la-palette-du-gout.html" class="card-link">
                         <div class="new-restaurant-and-card">
                             <div class="new-restaurant">
                                 <p>Nouveau</p>
@@ -86,12 +88,13 @@
                                     </div>
                                     <div class="heart-card">
                                         <i class="fa-regular fa-heart"></i>
+                                        <i class="full-heart fa-solid fa-heart"></i>
                                     </div>
                                 </div>
                             </article>
                         </div>
                     </a>
-                    <a href="restaurants/la-note-enchantee.html" class="">
+                    <a href="restaurants/la-note-enchantee.html" class="card-link">
                         <div class="new-restaurant-and-card">
                             <div class="new-restaurant">
                                 <p>Nouveau</p>
@@ -106,6 +109,7 @@
                                     </div>
                                     <div class="heart-card">
                                         <i class="fa-regular fa-heart"></i>
+                                        <i class="full-heart fa-solid fa-heart"></i>
                                     </div>
                                 </div>
                             </article>
@@ -113,7 +117,7 @@
                     </a>
                 </div>
                 <div class="second-restaurants-row">
-                    <a href="restaurants/a-la-française.html" class="">
+                    <a href="restaurants/a-la-française.html" class="card-link">
                         <article class="restaurants-card">
                             <img src="assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
                                 alt="Photo du restaurant a la française">
@@ -124,11 +128,12 @@
                                 </div>
                                 <div class="heart-card">
                                     <i class="fa-regular fa-heart"></i>
+                                    <i class="full-heart fa-solid fa-heart"></i>
                                 </div>
                             </div>
                         </article>
                     </a>
-                    <a href="restaurants/le-delice-des-sens.html" class="">
+                    <a href="restaurants/le-delice-des-sens.html" class="card-link">
                         <article class="restaurants-card">
                             <img src="assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
                                 alt="Photo du restaurant le delice des sens">
@@ -139,6 +144,7 @@
                                 </div>
                                 <div class="heart-card">
                                     <i class="fa-regular fa-heart"></i>
+                                    <i class="full-heart fa-solid fa-heart"></i>
                                 </div>
                             </div>
                         </article>
@@ -146,31 +152,30 @@
                 </div>
             </div>
         </section>
-        <footer>
-            <div class="footer-content">
-                <p class="footer-title">ohmyfood</p>
-                <div class="footer-only-responsive">
-                    <ul class="propose-and-become-link">
-                        <li class="link-with-icon">
-                            <div class="link-icon"><i class="fa-solid fa-utensils"></i></div><a href="#">Proposer un
-                                restaurant
-                            </a>
-                        </li>
-                        <li class="link-with-icon">
-                            <div class="link-icon"><i class="fa-solid fa-handshake-angle"></i></div><a href="#">Devenir
-                                partenaire
-                            </a>
-                        </li>
-                    </ul>
-                    <ul class="mention-and-contact-link">
-                        <li class="link-without-icon"><a href="#">Mentions légales</a></li>
-                        <li class="link-without-icon"><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </footer>
     </main>
-
+    <footer>
+        <div class="footer-content">
+            <p class="footer-title">ohmyfood</p>
+            <div class="footer-only-responsive">
+                <ul class="propose-and-become-link">
+                    <li class="link-with-icon">
+                        <div class="link-icon"><i class="fa-solid fa-utensils"></i></div><a href="#">Proposer un
+                            restaurant
+                        </a>
+                    </li>
+                    <li class="link-with-icon">
+                        <div class="link-icon"><i class="fa-solid fa-handshake-angle"></i></div><a href="#">Devenir
+                            partenaire
+                        </a>
+                    </li>
+                </ul>
+                <ul class="mention-and-contact-link">
+                    <li class="link-without-icon"><a href="#">Mentions légales</a></li>
+                    <li class="link-without-icon"><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
