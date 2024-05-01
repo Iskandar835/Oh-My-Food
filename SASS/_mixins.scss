@@ -1,8 +1,4 @@
-@mixin flexMiddle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+//** all useful mixins for mobile and desktop, for homepage and restaurant pages **
 
 @mixin flexColumn {
     display: flex;
@@ -12,5 +8,21 @@
 @mixin flexRow {
     display: flex;
     flex-direction: row;
+}
+
+@mixin rowReverse {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+@mixin flexMiddle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin itemsCenter {
+    display: flex;
+    align-items: center;
 }
 

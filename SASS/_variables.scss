@@ -1,4 +1,6 @@
-    $main-color: #F6F6F6;
+   
+//** all the colors **
+   $main-color: #F6F6F6;
     $body-bg-and-footer-font-color: #FFFFFF;
     $nouveau-font-color: #008766;
     $location-bg-color: #EAEAEA;
@@ -9,14 +11,14 @@
     $tertiary-color: #99E2D0;
 
     
-    /** color for the footer bg, price, icone back  **/
+    // ** color for the footer bg, price, icone back  **
     $footer-and-co-color: #353535;
     
-    /** color for the title  **/
+    // ** color for the title  **
     $body-font-color: #000000;
     $secondary-color-title: #101010;
 
-    /**** TEXT CONFIGURATION  ****/
+    // **** TEXT CONFIGURATION  ****
 
     $homepage-h1-and-h2-size: 24px;
     $homepage-h1-and-h2-weight: 700;   
@@ -26,3 +28,5 @@
     $card-subtitle-font-weight: 300;
     $footer-title-font-size: 18px;
     $footer-subtitle-font-size: 16px;
+
+    

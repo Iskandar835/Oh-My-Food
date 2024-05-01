@@ -1,3 +1,198 @@
+//** import of all useful files **
+
+@import './_variables';
+@import './_mixins';
+@import './_placeholder';
+@import './_variables';
+@import './_animations';
+
+
 body {
-    background-color: beige;
+    font-family: "roboto", sans-serif;
+    margin: 0;
+    color: $body-font-color;
+}
+
+
+
+h1 {
+    margin: 0 0 0 5px;
+    font-family: 'shrikhand', sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: $secondary-color-title;
+}
+
+h2 {
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0 0 5px 0;
+}
+
+h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    
+    height: 63px;
+    &__logo {
+        width: 162px;
+        height: 44px;
+    }
+    &__icon {
+        margin-right: 80px;
+    }
+     i {
+        font-size: 20px;
+        color: $footer-and-co-color;
+     }
+}
+
+
+
+.restaurant-picture img {
+    width: 100%;
+}
+
+
+.all-menu {
+    position: relative;
+    z-index: 1;
+    padding: 10px 13px;
+    bottom: 50px;
+    background-color: $main-color;
+    border-radius: 40px 40px 0 0;
+}
+
+.section-title {
+    @include itemsCenter;
+    margin: 25px 0;
+    gap: 30px;
+
+}
+
+.heart-card {
+    margin: 0 25px 30px 0;
+    i {
+        position: absolute;
+        font-size: 26px;
+        color: $secondary-color-title;
+    }
+}
+
+.full-heart {
+    @include heartButton;
+}
+
+
+.border-title {
+    width: 40px;
+    margin-bottom: 12px;
+    border-bottom: 3px solid $tertiary-color;
+}
+
+.dish-cards-gang {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dish-cards {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   width: 91%;
+   padding: 13px 15px;
+   background-color: $body-bg-and-footer-font-color;
+   border-radius: 15px;
+   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.089);
+   p {
+    margin: 2px 0 0 0;
+    font-size: 15px;
+    font-weight: 300;
+   }
+}
+
+.dish-cards-price p {
+    margin-top: 23px;
+    color: $footer-and-co-color;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 40px 0 0 0;
+    &__commander {
+        @include button;
+        width: 155px;
+    }
+}
+
+
+.starters-menu,
+.main-dish-menu {
+    margin-bottom: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+/**** FOOTER  ****/
+
+footer {
+    padding: 25px;
+    color: $body-bg-and-footer-font-color;
+    background-color: $footer-and-co-color;
+    a {
+        color: $body-bg-and-footer-font-color;
+    }
+}
+
+.footer-title {
+    margin-top: 0;
+    font-family: "shrikhand", sans-serif;
+    font-size: $footer-title-font-size;
+}
+
+.propose-and-become-link,
+.mention-and-contact-link {
+    @include flexColumn;
+    list-style-type: none;
+    margin: 8px 0 0 0;
+    padding: 0;
+    gap: 8px;
+}
+
+.link-with-icon {
+    @include itemsCenter;
+    font-size: $footer-subtitle-font-size;
+    font-weight: 500;
+}
+
+.link-icon {
+    width: 25px;
+    font-size: 13px;
+}
+
+.link-without-icon {
+    font-size: $footer-subtitle-font-size;
+    font-weight: 400;
 }
