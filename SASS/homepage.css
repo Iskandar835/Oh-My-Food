@@ -24,12 +24,12 @@ a {
   z-index: 2;
   display: flex;
   justify-content: center;
-  align-items: center;
   height: 63px;
 }
 .header__logo {
   width: 162px;
   height: 44px;
+  margin-top: 15px;
 }
 
 .location-city {
@@ -279,6 +279,7 @@ footer a {
   }
   .header__logo {
     width: 200px;
+    margin-top: 25px;
   }
   .location-city {
     box-shadow: none;

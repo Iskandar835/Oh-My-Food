@@ -36,11 +36,12 @@ a {
 .header {
     position: relative;
     z-index: 2;
-    @include flexMiddle;
+    @include justifyCenter;
     height: 63px;
     &__logo {
         width: 162px;
         height: 44px;
+        margin-top: 15px;
     }
 }
 
@@ -76,10 +77,8 @@ a {
 }
 
 .btn {
-    display: flex;
-    justify-content: center;
+    @include justifyCenter;
     margin: 30px 0 45px 0;
-
     &__restaurant-search {
         @include button;
         width: 188px;
@@ -272,6 +271,7 @@ footer {
         height: 95px;
         &__logo {
             width: 200px;
+            margin-top: 25px;
         }
     }
     

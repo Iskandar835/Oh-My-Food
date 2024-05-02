@@ -1,6 +1,6 @@
 body {
-  font-family: "roboto", sans-serif;
   margin: 0;
+  font-family: "roboto", sans-serif;
   color: #000000;
 }
 
@@ -13,9 +13,9 @@ h1 {
 }
 
 h2 {
+  margin: 0 0 5px 0;
   font-size: 16px;
   font-weight: 300;
-  margin: 0 0 5px 0;
 }
 
 h3 {
@@ -30,15 +30,18 @@ a {
 
 .header {
   display: flex;
-  align-items: center;
+  justify-content: center;
   height: 63px;
 }
 .header__logo {
+  margin-top: 15px;
   width: 162px;
   height: 44px;
 }
 .header__icon {
-  margin-right: 80px;
+  position: absolute;
+  top: 23px;
+  left: 25px;
 }
 .header i {
   font-size: 20px;
@@ -49,40 +52,43 @@ a {
   width: 100%;
 }
 
-.all-menu {
+.menu {
   position: relative;
   z-index: 1;
-  padding: 10px 13px;
-  bottom: 50px;
+  margin-top: -40px;
+  padding: 30px 13px 40px 13px;
   background-color: #F6F6F6;
   border-radius: 40px 40px 0 0;
 }
-
-.section-title {
+.menu__title {
   display: flex;
   align-items: center;
-  margin: 25px 0;
+  margin-bottom: 25px;
   gap: 30px;
 }
-
-.heart-card {
+.menu__title-heart {
   margin: 0 25px 30px 0;
 }
-.heart-card i {
+.menu__title-heart i {
   position: absolute;
   font-size: 26px;
   color: #101010;
 }
-
-.full-heart {
+.menu__title-heart .full-heart {
   opacity: 0;
 }
-.full-heart:hover {
+.menu__title-heart .full-heart:hover {
   opacity: 1;
   color: transparent;
   background: linear-gradient(#FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
+}
+
+.starters-menu,
+.main-dish-menu,
+.dessert-menu {
+  margin-bottom: 40px;
 }
 
 .border-title {
@@ -91,40 +97,42 @@ a {
   border-bottom: 3px solid #99E2D0;
 }
 
-.dish-cards-gang {
+.dish__cards {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-
-.dish-cards {
+.dish__cards-alone {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 91%;
-  padding: 13px 15px;
+  width: 100%;
+  padding: 13px 0;
   background-color: #FFFFFF;
   border-radius: 15px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.089);
 }
-.dish-cards p {
+.dish__cards-alone p {
   margin: 2px 0 0 0;
   font-size: 15px;
   font-weight: 300;
 }
-
-.dish-cards-price p {
-  margin-top: 23px;
-  color: #353535;
+.dish__cards-text {
+  margin-left: 15px;
+}
+.dish__cards-price {
+  margin: 23px 15px 0 0;
+}
+.dish__cards-price p {
   font-size: 15px;
   font-weight: 700;
+  color: #353535;
 }
 
 .btn {
   display: flex;
   justify-content: center;
   text-align: center;
-  margin: 40px 0 0 0;
 }
 .btn__commander {
   background: linear-gradient(#FF79DA, #9356DC);
@@ -140,11 +148,6 @@ a {
 .btn__commander:hover {
   opacity: 0.8;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
-}
-
-.starters-menu,
-.main-dish-menu {
-  margin-bottom: 40px;
 }
 
 /**** FOOTER  ****/
@@ -188,4 +191,61 @@ footer a {
 .link-without-icon {
   font-size: 16px;
   font-weight: 400;
+}
+
+@media (min-width: 769px) {
+  .header {
+    height: 95px;
+  }
+  .header__logo {
+    width: 200px;
+    margin-top: 25px;
+  }
+  .header__icon {
+    top: 38px;
+  }
+  .restaurant-picture img {
+    width: 100%;
+    height: 380px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .menu-only-responsive {
+    display: flex;
+    justify-content: center;
+  }
+  .menu {
+    width: 44%;
+    padding: 50px 210px 40px 210px;
+  }
+  .menu__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  .dish__cards-alone {
+    width: 100%;
+  }
+  footer {
+    padding: 60px 60px 30px 60px;
+  }
+  footer .footer-content {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 90px;
+  }
+  footer .footer-title {
+    margin-bottom: 0;
+  }
+  .footer-only-responsive {
+    display: flex;
+    gap: 45px;
+  }
+  .propose-and-become-link,
+  .mention-and-contact-link {
+    flex-direction: row;
+    gap: 15px;
+  }
 }/*# sourceMappingURL=restaurants.css.map */

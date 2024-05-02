@@ -7,13 +7,13 @@
 @import './_animations';
 
 
+//**** GENERAL ****
+
 body {
-    font-family: "roboto", sans-serif;
     margin: 0;
+    font-family: "roboto", sans-serif;
     color: $body-font-color;
 }
-
-
 
 h1 {
     margin: 0 0 0 5px;
@@ -24,9 +24,9 @@ h1 {
 }
 
 h2 {
+    margin: 0 0 5px 0;
     font-size: 16px;
     font-weight: 300;
-    margin: 0 0 5px 0;
 }
 
 h3 {
@@ -39,60 +39,65 @@ a {
     text-decoration: none;
 }
 
+
+//**** HEADER ****
+
 .header {
-    display: flex;
-    align-items: center;
-    
+    @include justifyCenter;
     height: 63px;
-    &__logo {
-        width: 162px;
-        height: 44px;
-    }
-    &__icon {
-        margin-right: 80px;
-    }
-     i {
-        font-size: 20px;
-        color: $footer-and-co-color;
-     }
+        &__logo {
+            margin-top: 15px;
+            width: 162px;
+            height: 44px;
+        }
+        &__icon {
+            position: absolute;
+            top: 23px;
+            left: 25px;
+        }
+        i {
+            font-size: 20px;
+            color: $footer-and-co-color;
+        }
 }
 
 
+//**** MENU SECTION ****
 
 .restaurant-picture img {
     width: 100%;
 }
 
-
-.all-menu {
+.menu {
     position: relative;
     z-index: 1;
-    padding: 10px 13px;
-    bottom: 50px;
+    margin-top: -40px;
+    padding: 30px 13px 40px 13px;
     background-color: $main-color;
     border-radius: 40px 40px 0 0;
-}
-
-.section-title {
-    @include itemsCenter;
-    margin: 25px 0;
-    gap: 30px;
-
-}
-
-.heart-card {
-    margin: 0 25px 30px 0;
-    i {
-        position: absolute;
-        font-size: 26px;
-        color: $secondary-color-title;
+    &__title {
+        @include itemsCenter;
+        margin-bottom: 25px;
+        gap: 30px;
+        &-heart {
+            margin: 0 25px 30px 0;
+            i {
+                position: absolute;
+                font-size: 26px;
+                color: $secondary-color-title;
+            }
+            .full-heart {
+                @include heartButton;
+            }
+        }
     }
 }
 
-.full-heart {
-    @include heartButton;
+.starters-menu,
+.main-dish-menu,
+.dessert-menu  {
+    margin-bottom: 40px;
 }
-
 
 .border-title {
     width: 40px;
@@ -100,59 +105,44 @@ a {
     border-bottom: 3px solid $tertiary-color;
 }
 
-.dish-cards-gang {
-    display: flex;
-    flex-direction: column;
+.dish__cards {
+    @include flexColumn;
     gap: 10px;
-}
-
-.dish-cards {
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   width: 91%;
-   padding: 13px 15px;
-   background-color: $body-bg-and-footer-font-color;
-   border-radius: 15px;
-   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.089);
-   p {
-    margin: 2px 0 0 0;
-    font-size: 15px;
-    font-weight: 300;
-   }
-}
-
-.dish-cards-price p {
-    margin-top: 23px;
-    color: $footer-and-co-color;
-    font-size: 15px;
-    font-weight: 700;
+    &-alone {
+        @include itemsCenter;
+        justify-content: space-between;
+        width: 100%;
+        padding: 13px 0;
+        background-color: $body-bg-and-footer-font-color;
+        border-radius: 15px;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.089);
+        p {
+            margin: 2px 0 0 0;
+            font-size: 15px;
+            font-weight: 300;
+        }
+    }
+    &-text {
+        margin-left: 15px;
+    }
+    &-price {
+        margin: 23px 15px 0 0;
+        p {
+            font-size: 15px;
+            font-weight: 700;
+            color: $footer-and-co-color;
+        }
+    }
 }
 
 .btn {
-    display: flex;
-    justify-content: center;
+    @include justifyCenter;
     text-align: center;
-    margin: 40px 0 0 0;
     &__commander {
         @include button;
         width: 155px;
     }
 }
-
-
-.starters-menu,
-.main-dish-menu {
-    margin-bottom: 40px;
-}
-
-
-
-
-
-
-
-
 
 
 /**** FOOTER  ****/
@@ -195,4 +185,75 @@ footer {
 .link-without-icon {
     font-size: $footer-subtitle-font-size;
     font-weight: 400;
+}
+
+
+//******* MEDIA QUERIES FOR DESKTOP ******* 
+@media (min-width: 769px) {
+
+
+    //**** HEADER ****
+
+    .header {
+        height: 95px;
+        &__logo {
+            width: 200px;
+            margin-top: 25px;
+        }
+        &__icon {
+            top: 38px;
+        }
+    }
+
+
+    //**** MENU SECTION ****
+
+    .restaurant-picture img {
+        width: 100%;
+        height: 380px;
+        object-fit: cover;
+    }
+
+    .menu-only-responsive {
+        @include justifyCenter;
+    }
+
+    .menu {
+        width: 44%;
+        padding: 50px 210px 40px 210px;
+        &__title {
+            @include flexMiddle;
+            margin-bottom: 40px;
+        }
+    }
+    
+    .dish__cards-alone {
+        width: 100%;
+    }
+
+
+    //**** FOOTER ****
+
+    footer {
+        padding: 60px 60px 30px 60px;
+        .footer-content {
+            @include rowReverse;
+            align-items: center;
+            gap: 90px;
+        }
+        .footer-title {
+            margin-bottom: 0;
+        }
+    }
+
+    .footer-only-responsive {
+        display: flex;
+        gap: 45px;
+    }
+    
+    .propose-and-become-link,
+    .mention-and-contact-link {
+        flex-direction: row;
+        gap: 15px;
+    }
 }
