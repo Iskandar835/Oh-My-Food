@@ -2,7 +2,6 @@
 
 @import './_variables';
 @import './_mixins';
-@import './_placeholder';
 @import './_variables';
 @import './_animations';
 
@@ -13,6 +12,14 @@ body {
     font-family: "roboto", sans-serif;
     margin: 0;
     color: $body-font-color;
+}
+
+.loader {
+    @include loader;
+    i {
+        color: $tertiary-color;
+        font-size: 40px;
+    }
 }
 
 h1, h2 {
@@ -204,17 +211,16 @@ a {
     }
 }
 
-.heart-card {
+.menu__title-heart {
     margin: 0 25px 30px 0;
     i {
         position: absolute;
         font-size: 26px;
         color: $secondary-color-title;
     }
-}
-
-.full-heart {
-    @include heartButton;
+    .full-heart {
+        @include heartButton;
+    }
 }
 
 
@@ -261,10 +267,118 @@ footer {
 }
 
 
+// ******* MEDIA QUERIS TABS *********
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    //**** LOADER **** 
+
+    .loader i {
+        font-size: 60px;
+    }
+
+
+    //**** HEADER **** 
+
+    .header {
+        height: 95px;
+        &__logo {
+            width: 200px;
+            margin-top: 25px;
+        }
+    }
+    
+
+    //**** SEARCH SECTION ****
+    
+    .location-city {
+        box-shadow: none;
+    }
+
+    .explore-restaurants h1 {
+        margin: 20px 35px 30px 35px;
+        font-size: 40px;
+    }
+    
+    .explore-restaurants-button {
+        margin: 30px 0 20px 0;
+    }
+    
+    
+    //**** FONCTIONNEMENT ****
+    
+    .fonctionnement {
+        padding: 50px 100px 50px 100px;
+    }
+
+    .fonctionnement__cards-gang {
+        @include flexRow;
+        gap: 30px;
+    }
+
+
+    //**** RESTAURANTS ****
+
+    .restaurants {
+        padding: 10px 100px 30px 100px;
+        h2 {
+            margin-bottom: 28px;
+        }
+    }
+    
+    .restaurants-cards-gang {
+        display: flex;
+        gap: 50px;
+    }
+        
+    .first-restaurants-row,
+    .second-restaurants-row {
+        flex-direction: row;
+        gap: 100px;
+    }
+        
+    .card-link {
+        width: 50%;
+    }
+
+
+    //**** FOOTER ****
+
+    footer {
+        padding: 60px 60px 30px 60px;
+        .footer-content {
+            @include rowReverse;
+            align-items: center;
+            gap: 90px;
+        }
+        .footer-title {
+            margin-bottom: 0;
+        }
+    }
+
+    .footer-only-responsive {
+        display: flex;
+        gap: 45px;
+    }
+    
+    .propose-and-become-link,
+    .mention-and-contact-link {
+        flex-direction: row;
+        gap: 15px;
+    }
+}
+
+
 //******* MEDIA QUERIES FOR DESKTOP *******
 @media (min-width: 1024px) {
 
+    //**** LOADER **** 
+    
+    .loader i {
+        font-size: 60px;
+    }
 
+    
     //**** HEADER **** 
     
     .header {
@@ -353,105 +467,4 @@ footer {
         flex-direction: row;
         gap: 15px;
     }
-}
-
-
-
-
-//*************** new media queries tabs ****************
-
-@media (min-width: 769px) and (max-width: 1024px) {
-
-        //**** HEADER **** 
-    
-        .header {
-            height: 95px;
-            &__logo {
-                width: 200px;
-                margin-top: 25px;
-            }
-        }
-        
-    
-        //**** SEARCH SECTION ****
-        
-        .location-city {
-            box-shadow: none;
-        }
-    
-        .explore-restaurants h1 {
-            margin: 20px 35px 30px 35px;
-            font-size: 40px;
-        }
-        
-        .explore-restaurants-button {
-            margin: 30px 0 20px 0;
-        }
-        
-        
-        //**** FONCTIONNEMENT ****
-        
-        .fonctionnement {
-            padding: 50px 100px 50px 100px;
-        }
-    
-        .fonctionnement__cards-gang {
-            @include flexRow;
-            gap: 30px;
-        }
-    
-    
-        //**** RESTAURANTS ****
-    
-        .restaurants {
-            padding: 10px 100px 30px 100px;
-            h2 {
-                margin-bottom: 28px;
-            }
-        }
-        
-        .restaurants-cards-gang {
-            display: flex;
-            gap: 50px;
-        }
-            
-        .first-restaurants-row,
-        .second-restaurants-row {
-            flex-direction: row;
-            gap: 100px;
-        }
-            
-        .card-link {
-            width: 50%;
-        }
-    
-    
-        //**** FOOTER ****
-    
-        footer {
-            padding: 60px 60px 30px 60px;
-            .footer-content {
-                @include rowReverse;
-                align-items: center;
-                gap: 90px;
-            }
-            .footer-title {
-                margin-bottom: 0;
-            }
-        }
-    
-        .footer-only-responsive {
-            display: flex;
-            gap: 45px;
-        }
-        
-        .propose-and-become-link,
-        .mention-and-contact-link {
-            flex-direction: row;
-            gap: 15px;
-        }
-
-
-
-
 }

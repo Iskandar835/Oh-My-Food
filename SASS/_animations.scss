@@ -1,5 +1,38 @@
 //**** GENERAL ANIMATIONS ****
 
+//** loader animation **
+
+@mixin loader {
+  @include flexMiddle;
+  position: fixed;
+  z-index: 3;
+  height: 100vh;
+  inset: 0;
+  background: $loader-color;
+  opacity: 0.9;
+  animation: loaderOut 0.2s forwards;
+  animation-delay: 1.5s;
+  transform-origin: bottom;
+  i {
+    animation: spinIcon 1s forwards;
+  }
+}
+
+@keyframes spinIcon {
+  to {
+    transform: rotate(540deg);
+  }
+}
+
+@keyframes loaderOut {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+
 
 //** all button **
 
@@ -19,7 +52,7 @@
 }
 
 
-//** favorite button heart **
+//** heart favorite button **
 
 @mixin heartButton {
   color: transparent;
@@ -35,7 +68,6 @@
 }
 
 @keyframes heartPulse {
-  
   20% {
     transform: scale(0.8)
 
@@ -65,7 +97,6 @@
   0% {
     transform: scale(0);
   }
-
   100% {
     transform: scale(1);
   }
@@ -84,7 +115,7 @@
     background-color: $tertiary-color;
     border-radius: 0 15px 15px 0;
     transition: margin-right 0.5s;
-
+    animation-fill-mode: forwards;
     i {
         display: grid;
         place-items: center;
@@ -94,62 +125,10 @@
         background-color: $body-bg-and-footer-font-color;
         border-radius: 50px;
     }
-}
-
-&:hover {
+  }
+  &:hover {
     .dish__cards-check {
         margin: 0;
     }
+  }
 }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// @mixin menu-favorite {
-//   padding: 0;
-//   display: flex;
-//   align-items: center;
-//   justify-content: flex-end;
-//   position: relative;
-//   .icon-fill,
-//   .icon-empty {
-//     position: absolute;
-//     top: -50px;
-//     right: 30px;
-//     font-size: 25.6px;
-//     cursor: pointer;
-//     transition: 0.2s linear;
-//   }
-//   .icon-fill {
-//     opacity: 0;
-//     z-index: 2;
-//     background: linear-gradient(0deg, #ab5edc 0%, #df6fda 58%);
-//     background-clip: text;
-//     -webkit-text-fill-color: transparent;
-//     color: transparent;
-//   }
-//   .icon-empty {
-//     opacity: 1;
-//   }
-//   &:hover {
-//     .icon-fill {
-//       opacity: 1;
-//       color: $color_9;
-//     }
-//     .icon-empty {
-//       opacity: 0;
-//     }
-//   }
-// } 
