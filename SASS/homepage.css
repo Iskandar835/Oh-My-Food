@@ -1,3 +1,28 @@
+@keyframes heartPulse {
+  20% {
+    transform: scale(0.8);
+  }
+  40% {
+    transform: scale(0.6);
+  }
+  60% {
+    transform: scale(0.8);
+  }
+  80% {
+    transform: scale(0.6);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+@keyframes appear {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 body {
   font-family: "roboto", sans-serif;
   margin: 0;
@@ -220,14 +245,16 @@ a {
 }
 
 .full-heart {
-  opacity: 0;
-}
-.full-heart:hover {
-  opacity: 1;
   color: transparent;
   background: linear-gradient(#FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 300ms ease-in-out;
+}
+.full-heart:hover {
+  opacity: 1;
+  animation: heartPulse 0.8s;
 }
 
 /**** FOOTER  ****/
@@ -273,7 +300,7 @@ footer a {
   font-weight: 400;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 1024px) {
   .header {
     height: 95px;
   }
@@ -301,6 +328,72 @@ footer a {
   }
   .restaurants {
     padding: 10px 175px 30px 175px;
+  }
+  .restaurants h2 {
+    margin-bottom: 28px;
+  }
+  .restaurants-cards-gang {
+    display: flex;
+    gap: 50px;
+  }
+  .first-restaurants-row,
+  .second-restaurants-row {
+    flex-direction: row;
+    gap: 100px;
+  }
+  .card-link {
+    width: 50%;
+  }
+  footer {
+    padding: 60px 60px 30px 60px;
+  }
+  footer .footer-content {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 90px;
+  }
+  footer .footer-title {
+    margin-bottom: 0;
+  }
+  .footer-only-responsive {
+    display: flex;
+    gap: 45px;
+  }
+  .propose-and-become-link,
+  .mention-and-contact-link {
+    flex-direction: row;
+    gap: 15px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .header {
+    height: 95px;
+  }
+  .header__logo {
+    width: 200px;
+    margin-top: 25px;
+  }
+  .location-city {
+    box-shadow: none;
+  }
+  .explore-restaurants h1 {
+    margin: 20px 35px 30px 35px;
+    font-size: 40px;
+  }
+  .explore-restaurants-button {
+    margin: 30px 0 20px 0;
+  }
+  .fonctionnement {
+    padding: 50px 100px 50px 100px;
+  }
+  .fonctionnement__cards-gang {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
+  .restaurants {
+    padding: 10px 100px 30px 100px;
   }
   .restaurants h2 {
     margin-bottom: 28px;

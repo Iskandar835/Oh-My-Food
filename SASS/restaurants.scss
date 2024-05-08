@@ -30,7 +30,7 @@ h2 {
 }
 
 h3 {
-    margin: 0;
+    margin: 0 0 3px 0;
     font-size: 18px;
     font-weight: 500;
 }
@@ -57,7 +57,7 @@ a {
         }
         i {
             font-size: 20px;
-            color: $footer-and-co-color;
+            color: $secondary-color-title;
         }
 }
 
@@ -78,7 +78,7 @@ a {
     &__title {
         @include itemsCenter;
         margin-bottom: 25px;
-        gap: 30px;
+        gap: 35px;
         &-heart {
             margin: 0 25px 30px 0;
             i {
@@ -93,46 +93,74 @@ a {
     }
 }
 
-.starters-menu,
-.main-dish-menu,
-.dessert-menu  {
+.dish {
+    display: grid;
+    grid-template-columns: 1fr;
     margin-bottom: 40px;
+    // max-width: 100%;
+    .border-title {
+        width: 40px;
+        margin-bottom: 12px;
+        border-bottom: 3px solid $tertiary-color;
+    }
+    .dish__cards {
+        overflow: hidden;
+        // max-width: 100%;
+        margin: 8px;
+    }
+}   
+
+.dish__cards-content {
+    display: flex;
+    overflow: hidden;
+    background: $body-bg-and-footer-font-color;
+    border-radius: 15px;
+    box-shadow:  0px 5px 10px rgba(0, 0, 0, 0.089);
+    cursor: pointer;
 }
 
-.border-title {
-    width: 40px;
-    margin-bottom: 12px;
-    border-bottom: 3px solid $tertiary-color;
+.dish__cards-content .dish__cards-text {
+    overflow: hidden;
+    padding: 10px 0 10px 16px;
 }
 
-.dish__cards {
-    @include flexColumn;
-    gap: 10px;
-    &-alone {
-        @include itemsCenter;
-        justify-content: space-between;
-        width: 100%;
-        padding: 13px 0;
-        background-color: $body-bg-and-footer-font-color;
-        border-radius: 15px;
-        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.089);
-        p {
-            margin: 2px 0 0 0;
-            font-size: 15px;
-            font-weight: 300;
-        }
-    }
-    &-text {
-        margin-left: 15px;
-    }
-    &-price {
-        margin: 23px 15px 0 0;
-        p {
-            font-size: 15px;
-            font-weight: 700;
-            color: $footer-and-co-color;
-        }
-    }
+.dish__cards-content .dish__cards-text h3,
+.dish__cards-content .dish__cards-text p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.dish__cards-content .dish__cards-text p {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.dish__cards-content .dish__cards-price {
+    display: flex;
+    align-items: flex-end;
+    margin-left: auto;
+    padding: 10px 16px 10px 0;
+    font-size: 15px;
+    font-weight: 700;
+    color: $footer-and-co-color;
+}
+
+.dish__cards-content {
+    @include dishChecked;
+}
+
+#starters-menu {
+    animation: appear 0.8s; 
+}
+
+#main-dish-menu {
+    animation: appear 1.2s;
+}
+
+#dessert-menu {
+    animation: appear 1.8s;
 }
 
 .btn {
@@ -227,9 +255,9 @@ footer {
         }
     }
     
-    .dish__cards-alone {
-        width: 100%;
-    }
+    // .dish__cards-alone {
+    //     width: 100%;
+    // }
 
 
     //**** FOOTER ****
