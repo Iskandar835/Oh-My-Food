@@ -1,6 +1,6 @@
 //**** GENERAL ANIMATIONS ****
 
-//** loader animation **
+//** homepage loader **
 
 @mixin loader {
   @include flexMiddle;
@@ -60,7 +60,7 @@
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
-  transition: all 300ms ease-in-out;
+  transition: all 300ms;
   &:hover {
     opacity: 1;
     animation: heartPulse 0.8s;
@@ -107,18 +107,16 @@
 
 @mixin dishChecked {
   .dish__cards-check {
-    display: grid;
-    place-items: center;
+    @include gridCenter;
     width: 4rem;
     flex-shrink: 0;
     margin-right: -4rem;
     background-color: $tertiary-color;
     border-radius: 0 15px 15px 0;
-    transition: margin-right 0.5s;
+    transition: margin-right 400ms;
     animation-fill-mode: forwards;
     i {
-        display: grid;
-        place-items: center;
+        @include gridCenter;
         width: 20px;
         height: 20px;
         color: $tertiary-color;

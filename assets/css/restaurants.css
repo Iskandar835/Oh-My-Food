@@ -72,9 +72,9 @@ a {
   height: 63px;
 }
 .header__logo {
-  margin-top: 15px;
   width: 162px;
   height: 44px;
+  margin-top: 15px;
 }
 .header__icon {
   position: absolute;
@@ -88,6 +88,9 @@ a {
 
 .restaurant-picture img {
   width: 100%;
+  height: 255px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .menu {
@@ -118,65 +121,47 @@ a {
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
-  transition: all 300ms ease-in-out;
+  transition: all 300ms;
 }
 .menu__title-heart .full-heart:hover {
   opacity: 1;
   animation: heartPulse 0.8s;
 }
 
-.dish {
-  display: grid;
-  grid-template-columns: 1fr;
-  margin-bottom: 40px;
+.starters-menu {
+  animation: appear 0.8s;
 }
-.dish .border-title {
+
+.main-dish-menu {
+  animation: appear 1.2s;
+}
+
+.dessert-menu {
+  animation: appear 1.8s;
+}
+
+.border-title {
   width: 40px;
   margin-bottom: 12px;
   border-bottom: 3px solid #99E2D0;
 }
-.dish .dish__cards {
-  overflow: hidden;
-  margin: 8px;
-}
 
-.dish__cards-content {
-  display: flex;
+.dish {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-bottom: 40px;
+  gap: 15px;
+}
+.dish__cards {
   overflow: hidden;
   background: #FFFFFF;
   border-radius: 15px;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.089);
   cursor: pointer;
 }
-
-.dish__cards-content .dish__cards-text {
-  overflow: hidden;
-  padding: 10px 0 10px 16px;
-}
-
-.dish__cards-content .dish__cards-text h3,
-.dish__cards-content .dish__cards-text p {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.dish__cards-content .dish__cards-text p {
-  margin: 0;
-  font-size: 15px;
-  font-weight: 300;
-}
-
-.dish__cards-content .dish__cards-price {
+.dish__cards-content {
   display: flex;
-  align-items: flex-end;
-  margin-left: auto;
-  padding: 10px 16px 10px 0;
-  font-size: 15px;
-  font-weight: 700;
-  color: #353535;
 }
-
 .dish__cards-content .dish__cards-check {
   display: grid;
   place-items: center;
@@ -185,7 +170,7 @@ a {
   margin-right: -4rem;
   background-color: #99E2D0;
   border-radius: 0 15px 15px 0;
-  transition: margin-right 0.5s;
+  transition: margin-right 400ms;
   animation-fill-mode: forwards;
 }
 .dish__cards-content .dish__cards-check i {
@@ -200,17 +185,30 @@ a {
 .dish__cards-content:hover .dish__cards-check {
   margin: 0;
 }
-
-#starters-menu {
-  animation: appear 0.8s;
+.dish__cards-text {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 13px 0 13px 16px;
 }
-
-#main-dish-menu {
-  animation: appear 1.2s;
+.dish__cards-text h3, .dish__cards-text p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin: 0;
 }
-
-#dessert-menu {
-  animation: appear 1.8s;
+.dish__cards-text p {
+  font-size: 15px;
+  font-weight: 300;
+}
+.dish__cards-price {
+  display: flex;
+  align-items: flex-end;
+  margin-left: auto;
+  padding: 14px 16px 14px 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: #353535;
 }
 
 .btn {
@@ -289,10 +287,7 @@ footer a {
     top: 38px;
   }
   .restaurant-picture img {
-    width: 100%;
     height: 380px;
-    -o-object-fit: cover;
-       object-fit: cover;
   }
   .menu-only-responsive {
     display: flex;

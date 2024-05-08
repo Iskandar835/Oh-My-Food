@@ -30,3 +30,14 @@
     display: flex;
     justify-content: center;
 }
+
+@mixin hiddenEllipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+@mixin gridCenter {
+    display: grid;
+    place-items: center;
+}

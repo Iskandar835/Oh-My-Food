@@ -37,8 +37,8 @@
   }
 }
 body {
-  font-family: "roboto", sans-serif;
   margin: 0;
+  font-family: "roboto", sans-serif;
   color: #000000;
 }
 
@@ -60,8 +60,8 @@ body {
   animation: spinIcon 1s forwards;
 }
 .loader i {
-  color: #99E2D0;
   font-size: 40px;
+  color: #99E2D0;
 }
 
 h1, h2 {
@@ -98,10 +98,10 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 17px;
   color: #353535;
   background-color: #EAEAEA;
   box-shadow: inset 0 6px 5px -5px rgba(0, 0, 0, 0.205), 0 4px 4px rgba(0, 0, 0, 0.205);
+  gap: 17px;
 }
 .location-city p {
   font-weight: 500;
@@ -162,10 +162,10 @@ a {
   align-items: center;
   width: 100%;
   height: 73px;
-  gap: 10px;
   background-color: #F6F6F6;
   border-radius: 15px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.144);
+  gap: 10px;
 }
 .fonctionnement__cards-pellet {
   position: relative;
@@ -261,8 +261,8 @@ a {
 .restaurants-card .card-text {
   display: flex;
   flex-direction: column;
-  gap: 3px;
   color: #000000;
+  gap: 3px;
 }
 .restaurants-card .card-text p {
   margin: 0;
@@ -284,7 +284,7 @@ a {
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
-  transition: all 300ms ease-in-out;
+  transition: all 300ms;
 }
 .menu__title-heart .full-heart:hover {
   opacity: 1;
@@ -352,7 +352,7 @@ footer a {
     margin: 20px 35px 30px 35px;
     font-size: 40px;
   }
-  .explore-restaurants-button {
+  .btn {
     margin: 30px 0 20px 0;
   }
   .fonctionnement {
@@ -421,7 +421,7 @@ footer a {
     margin: 20px 35px 30px 35px;
     font-size: 40px;
   }
-  .explore-restaurants-button {
+  .btn {
     margin: 30px 0 20px 0;
   }
   .fonctionnement {
