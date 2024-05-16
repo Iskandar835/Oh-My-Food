@@ -1,3 +1,8 @@
+//** import of all useful files **
+
+@import './_mixins';
+
+
 //**** GENERAL ANIMATIONS ****
 
 //** homepage loader **
@@ -14,7 +19,7 @@
   animation-delay: 1.5s;
   transform-origin: bottom;
   i {
-    animation: spinIcon 1s forwards;
+    animation: spinIcon 1.5s forwards;
   }
 }
 
@@ -38,13 +43,13 @@
 
 @mixin button {
     background: $button-color;
-    color: white;
+    color: $body-bg-and-footer-font-color;
     padding: 16px;
     font-weight: 500;
     border-radius: 50px;
     cursor: pointer;
-     transition: opacity 0.5s ease, box-shadow 0.5s ease; 
-     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.5s ease, box-shadow 0.5s ease; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     &:hover {
       opacity: 0.8;
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
@@ -55,6 +60,7 @@
 //** heart favorite button **
 
 @mixin heartButton {
+  cursor: pointer;
   color: transparent;
   background: $button-color;
   background-clip: text;
@@ -114,11 +120,12 @@
     background-color: $tertiary-color;
     border-radius: 0 15px 15px 0;
     transition: margin-right 400ms;
-    animation-fill-mode: forwards;
     i {
         @include gridCenter;
-        width: 20px;
-        height: 20px;
+        width: 18px;
+        height: 18px;
+        padding: 2px;
+        font-size: 14px;
         color: $tertiary-color;
         background-color: $body-bg-and-footer-font-color;
         border-radius: 50px;

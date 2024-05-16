@@ -1,9 +1,8 @@
 //** import of all useful files **
 
-@import './_variables';
+@import './_animations';
 @import './_mixins';
 @import './_variables';
-@import './_animations';
 
 
 //**** GENERAL ****
@@ -63,7 +62,10 @@ a {
     background-color: $location-bg-color;
     box-shadow: inset 0 6px 5px -5px rgba(0, 0, 0, 0.205), 0 4px 4px rgba(0, 0, 0, 0.205);
     gap: 17px;
-    & p {
+    i {
+        color: $footer-and-co-color;
+    }
+    p {
         font-weight: 500;
     }
 }
@@ -174,8 +176,8 @@ a {
         width: 80px;
         height: 29px;
         margin: 12px;
-        font-size: 14px;
-        font-weight: 500;
+        font-size: $nouveau-font-size;
+        font-weight: $nouveau-font-weight;
         color: $nouveau-font-color;
         background-color: $tertiary-color;
         border-radius: 2px;
@@ -253,7 +255,7 @@ footer {
 .link-with-icon {
     @include itemsCenter;
     font-size: $footer-subtitle-font-size;
-    font-weight: 500;
+    font-weight: $weight-footer-link-icon;
 }
 
 .link-icon {
@@ -263,7 +265,6 @@ footer {
 
 .link-without-icon {
     font-size: $footer-subtitle-font-size;
-    font-weight: 400;
 }
 
 
@@ -370,7 +371,7 @@ footer {
 
 
 //******* MEDIA QUERIES FOR DESKTOP *******
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
 
     //**** LOADER **** 
     

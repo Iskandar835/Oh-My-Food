@@ -1,9 +1,8 @@
 //** import of all useful files **
 
-@import './_variables';
+@import './_animations';
 @import './_mixins';
 @import './_variables';
-@import './_animations';
 
 
 //**** GENERAL ****
@@ -17,21 +16,21 @@ body {
 h1 {
     margin: 0 0 0 5px;
     font-family: 'shrikhand', sans-serif;
-    font-size: 28px;
-    font-weight: 400;
+    font-size: $restaurant-page-h1-size;
+    font-weight: $restaurant-page-h1-weight;
     color: $secondary-color-title;
 }
 
 h2 {
     margin: 0 0 5px 0;
-    font-size: 16px;
-    font-weight: 300;
+    font-size: $menu-type-font-size;
+    font-weight: $menu-type-font-weight;
 }
 
 h3 {
     margin: 0 0 3px 0;
-    font-size: 18px;
-    font-weight: 500;
+    font-size: $card-title-font-size;
+    font-weight: $restaurant-card-title-weight;
 }
 
 a {
@@ -44,20 +43,20 @@ a {
 .header {
     @include justifyCenter;
     height: 63px;
-        &__logo {
-            width: 162px;
-            height: 44px;
-            margin-top: 15px;
-        }
-        &__icon {
-            position: absolute;
-            top: 23px;
-            left: 25px;
-        }
+    &__icon {
+        position: absolute;
+        top: 23px;
+        left: 25px;
         i {
             font-size: 20px;
             color: $secondary-color-title;
-        }
+            }
+    }
+    &__logo {
+        width: 162px;
+        height: 44px;
+        margin-top: 15px;
+    }
 }
 
 
@@ -136,8 +135,8 @@ a {
             margin: 0;
         }
         p {
-            font-size: 15px;
-            font-weight: 300;
+            font-size: $restaurant-card-subtitle-size;
+            font-weight: $card-subtitle-font-weight;
         }
     }
     &__cards-price {
@@ -145,8 +144,8 @@ a {
         align-items: flex-end;
         margin-left: auto;
         padding: 14px 16px 14px 0;
-        font-size: 15px;
-        font-weight: 700;
+        font-size: $price-font-size;
+        font-weight: $price-font-weight;
         color: $footer-and-co-color;
     }
 }
@@ -190,7 +189,7 @@ footer {
 .link-with-icon {
     @include itemsCenter;
     font-size: $footer-subtitle-font-size;
-    font-weight: 500;
+    font-weight: $weight-footer-link-icon;
 }
 
 .link-icon {
@@ -200,11 +199,10 @@ footer {
 
 .link-without-icon {
     font-size: $footer-subtitle-font-size;
-    font-weight: 400;
 }
 
 
-//******* MEDIA QUERIES FOR DESKTOP ******* 
+//******* MEDIA QUERIES FOR TABS AND DESKTOP ******* 
 @media (min-width: 769px) {
 
 
@@ -212,12 +210,12 @@ footer {
 
     .header {
         height: 95px;
+        &__icon {
+            top: 38px;
+        }
         &__logo {
             width: 200px;
             margin-top: 25px;
-        }
-        &__icon {
-            top: 38px;
         }
     }
 

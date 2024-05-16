@@ -57,7 +57,7 @@ body {
   transform-origin: bottom;
 }
 .loader i {
-  animation: spinIcon 1s forwards;
+  animation: spinIcon 1.5s forwards;
 }
 .loader i {
   font-size: 40px;
@@ -103,6 +103,9 @@ a {
   box-shadow: inset 0 6px 5px -5px rgba(0, 0, 0, 0.205), 0 4px 4px rgba(0, 0, 0, 0.205);
   gap: 17px;
 }
+.location-city i {
+  color: #353535;
+}
 .location-city p {
   font-weight: 500;
 }
@@ -129,7 +132,7 @@ a {
 }
 .btn__restaurant-search {
   background: linear-gradient(#FF79DA, #9356DC);
-  color: white;
+  color: #FFFFFF;
   padding: 16px;
   font-weight: 500;
   border-radius: 50px;
@@ -279,6 +282,7 @@ a {
   color: #101010;
 }
 .menu__title-heart .full-heart {
+  cursor: pointer;
   color: transparent;
   background: linear-gradient(#FF79DA, #9356DC);
   background-clip: text;
@@ -331,7 +335,6 @@ footer a {
 
 .link-without-icon {
   font-size: 16px;
-  font-weight: 400;
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -403,7 +406,7 @@ footer a {
     gap: 15px;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   .loader i {
     font-size: 60px;
   }
