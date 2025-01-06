@@ -1,0 +1,232 @@
+[
+  {
+    "id": 1,
+    "name": "La palette du goût",
+    "location": "Ménilmontant",
+    "entries": [
+      {
+        "id": 1,
+        "name": "Fricassée d'escargot au piment d'Espelette",
+        "price": 25
+      },
+      {
+        "id": 2,
+        "name": "Foie gras de canard mi-cuit et ses copeaux de truffe noire",
+        "price": 35
+      },
+      {
+        "id": 3,
+        "name": "Œuf au plat assaisonné à la truffe sur lit de caviar",
+        "price": 20
+      }
+    ],
+    "dishes": [
+      {
+        "id": 1,
+        "name": "Filet de bœuf aux herbes accompagné de sa ribambelle de légumes",
+        "price": 40
+      },
+      {
+        "id": 2,
+        "name": "Parmentier de queue de bœuf à la truffe noire sur sa purée de panais",
+        "price": 35
+      },
+      {
+        "id": 3,
+        "name": "Filet de turbot aux agrumes",
+        "price": 44
+      }
+    ],
+    "desserts": [
+      {
+        "id": 1,
+        "name": "Paris-Brest revisité",
+        "price": 18
+      },
+      {
+        "id": 2,
+        "name": "Macaron au chocolat d'exception et glace à la vanille de Madagascar",
+        "price": 22
+      },
+      {
+        "id": 3,
+        "name": "Mousse au chocolat au piment d'Espelette et à la truffe noire",
+        "price": 23
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "La note enchantée",
+    "location": "Charonne",
+    "entries": [
+      {
+        "id": 1,
+        "name": "Ravioles de foie gras accompagnées de leur crème à la truffe",
+        "price": 25
+      },
+      {
+        "id": 2,
+        "name": "Caviar osciètre sur blini à la farine de blé noir",
+        "price": 35
+      },
+      {
+        "id": 3,
+        "name": "Homard et espuma de potiron marinés aux zestes d'orange",
+        "price": 20
+      },
+      {
+        "id": 4,
+        "name": "Foie gras de canard cuit entier confiture de figue et pain toasté",
+        "price": 35
+      }
+    ],
+    "dishes": [
+      {
+        "id": 1,
+        "name": "Noix de coquilles Saint-Jacques sur lit de purée de céleri-rave",
+        "price": 40
+      },
+      {
+        "id": 2,
+        "name": "Langoustine poêlée purée de patate douce",
+        "price": 35
+      },
+      {
+        "id": 3,
+        "name": "Mijoté de queue de bœuf et riz sauvage aux zestes de citron",
+        "price": 44
+      }
+    ],
+    "desserts": [
+      {
+        "id": 1,
+        "name": "Macaron noisette et chocolat glace au caramel brun et sel de Guérande",
+        "price": 18
+      },
+      {
+        "id": 2,
+        "name": "Baba au rhum revisité avec son coulis de citron",
+        "price": 22
+      },
+      {
+        "id": 3,
+        "name": "Tarte au citron meringuée déstructurée",
+        "price": 23
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "À la française",
+    "location": "Cité Rouge",
+    "picture": "",
+    "entries": [
+      {
+        "id": 1,
+        "name": "Tartare de poulpe acidulé aux zestes d'orange",
+        "price": 25
+      },
+      {
+        "id": 2,
+        "name": "Velouté de légumes d'antan carotte, panais, topinambour",
+        "price": 35
+      },
+      {
+        "id": 3,
+        "name": "Soupe à l'oignon revisitée",
+        "price": 20
+      }
+    ],
+    "dishes": [
+      {
+        "id": 1,
+        "name": "Coquilles Saint-Jacques accompagnées d'une purée de panais",
+        "price": 40
+      },
+      {
+        "id": 2,
+        "name": "Magret de canard et parmentier de pommes de terre",
+        "price": 35
+      },
+      {
+        "id": 3,
+        "name": "Pigeonneau d’Ille-et-Vilaine sur son lit de gnocchis aux légumes",
+        "price": 44
+      }
+    ],
+    "desserts": [
+      {
+        "id": 1,
+        "name": "Pétales de violettes glacés et purée de noisettes",
+        "price": 18
+      },
+      {
+        "id": 2,
+        "name": "Fondant au chocolat revisité",
+        "price": 22
+      },
+      {
+        "id": 3,
+        "name": "Millefeuille croustillant myrtilles et pâte d’amande",
+        "price": 23
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Le délice des sens",
+    "location": "Folie-Méricourt",
+    "entries": [
+      {
+        "id": 1,
+        "name": "Tartare de thon assaisonné au yuzu",
+        "price": 25
+      },
+      {
+        "id": 2,
+        "name": "Bouchée de homard croustillant et sa farandole de petits légumes",
+        "price": 35
+      },
+      {
+        "id": 3,
+        "name": "Velouté de cèpes aux truffes",
+        "price": 20
+      }
+    ],
+    "dishes": [
+      {
+        "id": 1,
+        "name": "Poulet rôti aux herbes de Provence et sa crème de truffe",
+        "price": 40
+      },
+      {
+        "id": 2,
+        "name": "Langouste rôtie et ses légumes de saison",
+        "price": 35
+      },
+      {
+        "id": 3,
+        "name": "Côte de bœuf Angus et sa purée de panais",
+        "price": 44
+      }
+    ],
+    "desserts": [
+      {
+        "id": 1,
+        "name": "Farandole de desserts du chef",
+        "price": 18
+      },
+      {
+        "id": 2,
+        "name": "Crème brulée revisitée",
+        "price": 22
+      },
+      {
+        "id": 3,
+        "name": "Tiramisu à la noisette",
+        "price": 23
+      }
+    ]
+  }
+]
