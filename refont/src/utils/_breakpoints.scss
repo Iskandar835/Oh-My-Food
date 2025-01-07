@@ -1,0 +1,22 @@
+// ** This synthaxe is for a use firendly media queries **
+
+$breakpoints-md: 768px;
+$breakpoints-lg: 1025px;
+
+@mixin tabs {
+  @media (min-width: $breakpoints-md) and (max-width: ($breakpoints-lg)) {
+    @content;
+  }
+}
+
+@mixin tabsAndDesktop {
+  @media (min-width: $breakpoints-md) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $breakpoints-lg) {
+    @content;
+  }
+}
