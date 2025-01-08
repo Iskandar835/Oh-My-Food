@@ -1,0 +1,12 @@
+@use "../utils/variables" as *;
+
+body {
+  margin: 0;
+  font-family: "roboto", sans-serif;
+  font-size: 16px;
+  color: $first-body-color;
+}
+
+a {
+  text-decoration: none;
+}
