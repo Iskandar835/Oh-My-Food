@@ -1,0 +1,44 @@
+@use "../../utils/mixins" as *;
+@use "../../utils/variables" as *;
+@use "../../utils/breakpoints" as *;
+
+.footer {
+  @include flexColumn;
+  padding: 25px;
+  color: $secondary-bg-color;
+  background-color: $tertiary-bg-color;
+  a {
+    color: $secondary-bg-color;
+  }
+  &__title {
+    margin: 0 0 10px 0;
+    font-family: "shrikhand", sans-serif;
+    font-size: 18px;
+  }
+  &__ul {
+    @include flexColumn;
+    list-style-type: none;
+    margin: 8px 0 0 0;
+    padding: 0;
+    gap: 8px;
+  }
+}
+
+@include tabsAndDesktop {
+  .footer {
+    flex-direction: row-reverse;
+    padding: 60px 60px 30px 60px;
+    gap: 90px;
+    &__title {
+      margin-bottom: 0;
+    }
+    &__links-container {
+      display: flex;
+      gap: 45px;
+    }
+    &__ul {
+      flex-direction: row;
+      gap: 15px;
+    }
+  }
+}
