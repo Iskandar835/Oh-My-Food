@@ -7,89 +7,89 @@
 
 //** homepage loader **
 @mixin loader {
-  @include flexMiddle;
-  position: fixed;
-  z-index: 3;
-  height: 100vh;
-  inset: 0;
-  background: linear-gradient(
-    $secondary-bg-color 80%,
-    $secondary-color,
-    $primary-color
-  );
-  opacity: 0.9;
-  animation: loaderOut 0.2s forwards;
-  animation-delay: 1.5s;
-  transform-origin: bottom;
-  i {
-    animation: spinIcon 1.5s forwards;
-  }
+   @include flexMiddle;
+   position: fixed;
+   z-index: 3;
+   height: 100vh;
+   inset: 0;
+   background: linear-gradient(
+      $secondary-bg-color 80%,
+      $secondary-color,
+      $primary-color
+   );
+   opacity: 0.9;
+   animation: loaderOut 0.2s forwards;
+   animation-delay: 1.5s;
+   transform-origin: bottom;
+   i {
+      animation: spinIcon 1.5s forwards;
+   }
 }
 
 @keyframes spinIcon {
-  to {
-    transform: rotate(540deg);
-  }
+   to {
+      transform: rotate(540deg);
+   }
 }
 
 @keyframes loaderOut {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(0);
-  }
+   from {
+      transform: scale(1);
+   }
+   to {
+      transform: scale(0);
+   }
 }
 
 //** all button **
 
 @mixin button {
-  background: $button-color;
-  color: $body-bg-and-footer-font-color;
-  padding: 16px;
-  font-weight: 500;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: opacity 0.5s ease, box-shadow 0.5s ease;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  &:hover {
-    opacity: 0.8;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
-  }
+   background: $button-color;
+   color: $body-bg-and-footer-font-color;
+   padding: 16px;
+   font-weight: 500;
+   border-radius: 50px;
+   cursor: pointer;
+   transition: opacity 0.5s ease, box-shadow 0.5s ease;
+   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+   &:hover {
+      opacity: 0.8;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+   }
 }
 
 //** heart favorite button **
 
 @mixin heartButton {
-  cursor: pointer;
-  color: transparent;
-  background: $button-color;
-  background-clip: text;
-  -webkit-background-clip: text;
-  opacity: 0;
-  transition: all 300ms;
-  &:hover {
-    opacity: 1;
-    animation: heartPulse 0.8s;
-  }
+   cursor: pointer;
+   color: transparent;
+   background: $button-color;
+   background-clip: text;
+   -webkit-background-clip: text;
+   opacity: 0;
+   transition: all 300ms;
+   &:hover {
+      opacity: 1;
+      animation: heartPulse 0.8s;
+   }
 }
 
 @keyframes heartPulse {
-  20% {
-    transform: scale(0.8);
-  }
-  40% {
-    transform: scale(0.6);
-  }
-  60% {
-    transform: scale(0.8);
-  }
-  80% {
-    transform: scale(0.6);
-  }
-  100% {
-    transform: scale(1.1);
-  }
+   20% {
+      transform: scale(0.8);
+   }
+   40% {
+      transform: scale(0.6);
+   }
+   60% {
+      transform: scale(0.8);
+   }
+   80% {
+      transform: scale(0.6);
+   }
+   100% {
+      transform: scale(1.1);
+   }
 }
 
 //**** ANIMATIONS FOR THE RESTAURANT PAGE ****
@@ -97,39 +97,39 @@
 //** delayed appearance of menus **
 
 @keyframes appear {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
+   0% {
+      transform: scale(0);
+   }
+   100% {
+      transform: scale(1);
+   }
 }
 
 //** dish checked animation **
 
 @mixin dishChecked {
-  .dish__cards-check {
-    @include gridCenter;
-    width: 4rem;
-    flex-shrink: 0;
-    margin-right: -4rem;
-    background-color: $tertiary-color;
-    border-radius: 0 15px 15px 0;
-    transition: margin-right 400ms;
-    i {
+   .dish__cards-check {
       @include gridCenter;
-      width: 18px;
-      height: 18px;
-      padding: 2px;
-      font-size: 14px;
-      color: $tertiary-color;
-      background-color: $body-bg-and-footer-font-color;
-      border-radius: 50px;
-    }
-  }
-  &:hover {
-    .dish__cards-check {
-      margin: 0;
-    }
-  }
+      width: 4rem;
+      flex-shrink: 0;
+      margin-right: -4rem;
+      background-color: $tertiary-color;
+      border-radius: 0 15px 15px 0;
+      transition: margin-right 400ms;
+      i {
+         @include gridCenter;
+         width: 18px;
+         height: 18px;
+         padding: 2px;
+         font-size: 14px;
+         color: $tertiary-color;
+         background-color: $body-bg-and-footer-font-color;
+         border-radius: 50px;
+      }
+   }
+   &:hover {
+      .dish__cards-check {
+         margin: 0;
+      }
+   }
 }

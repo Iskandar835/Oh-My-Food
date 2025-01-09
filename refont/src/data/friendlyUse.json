@@ -1,19 +1,19 @@
 {
-  "fonctionnement": [
-    {
-      "id": "1",
-      "title": "Choisissez un restaurant",
-      "icon": "fa-solid fa-mobile-screen-button"
-    },
-    {
-      "id": "2",
-      "title": "Composez votre menu",
-      "icon": "fa-solid fa-list-ul"
-    },
-    {
-      "id": "3",
-      "title": "Dégustez au restaurant",
-      "icon": "fa-solid fa-store"
-    }
-  ]
+   "fonctionnement": [
+      {
+         "id": "1",
+         "title": "Choisissez un restaurant",
+         "icon": "fa-solid fa-mobile-screen-button"
+      },
+      {
+         "id": "2",
+         "title": "Composez votre menu",
+         "icon": "fa-solid fa-list-ul"
+      },
+      {
+         "id": "3",
+         "title": "Dégustez au restaurant",
+         "icon": "fa-solid fa-store"
+      }
+   ]
 }

@@ -1,1 +1,35 @@
+@use "../../utils/mixins" as *;
+@use "../../utils/variables" as *;
+@use "../../utils/breakpoints" as media;
 
+.header {
+   @include justifyCenter;
+   height: 65px;
+   &__icon-container {
+      position: absolute;
+      top: 25px;
+      left: 25px;
+      i {
+         font-size: 20px;
+         color: $secondary-title-color;
+      }
+   }
+   &__logo {
+      width: 162px;
+      height: 44px;
+      margin-top: 15px;
+   }
+}
+
+@include media.tabsAndDesktop {
+   .header {
+      height: 95px;
+      &__icon-container {
+         top: 38px;
+      }
+      &__logo {
+         width: 200px;
+         margin-top: 25px;
+      }
+   }
+}
