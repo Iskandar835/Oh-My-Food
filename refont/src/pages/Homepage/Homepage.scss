@@ -1,0 +1,33 @@
+@use "../../utils/mixins" as *;
+@use "../../utils/variables" as *;
+@use "../../utils/breakpoints" as media;
+
+.explore {
+   padding: 35px 20px 55px 20px;
+   text-align: center;
+   background-color: $first-bg-color;
+   h1 {
+      margin: 0 35px;
+   }
+   p {
+      margin: 15px 0 30px 0;
+      font-size: 18px;
+      font-weight: 300;
+      color: $tertiary-bg-color;
+   }
+   &__btn-container {
+      @include justifyCenter;
+   }
+}
+
+@include media.tabsAndDesktop {
+   .explore {
+      padding: 30px 20px 55px 20px;
+      h1 {
+         font-size: 40px;
+      }
+      p {
+         margin: 30px 0;
+      }
+   }
+}

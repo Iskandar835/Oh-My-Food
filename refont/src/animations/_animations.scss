@@ -1,13 +1,13 @@
 //** import of all useful files **
 
-@import "./_mixins";
-@import "./_variable";
+@use "../utils/mixins" as *;
+@use "../utils/variables" as *;
 
 //**** GENERAL ANIMATIONS ****
 
 //** homepage loader **
 @mixin loader {
-   @include flexMiddle;
+   @include flexCenter;
    position: fixed;
    z-index: 3;
    height: 100vh;
@@ -44,12 +44,6 @@
 //** all button **
 
 @mixin button {
-   background: $button-color;
-   color: $body-bg-and-footer-font-color;
-   padding: 16px;
-   font-weight: 500;
-   border-radius: 50px;
-   cursor: pointer;
    transition: opacity 0.5s ease, box-shadow 0.5s ease;
    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
    &:hover {
@@ -63,7 +57,7 @@
 @mixin heartButton {
    cursor: pointer;
    color: transparent;
-   background: $button-color;
+   background: $button-bg-color;
    background-clip: text;
    -webkit-background-clip: text;
    opacity: 0;
@@ -123,7 +117,7 @@
          padding: 2px;
          font-size: 14px;
          color: $tertiary-color;
-         background-color: $body-bg-and-footer-font-color;
+         background-color: $secondary-body-color;
          border-radius: 50px;
       }
    }

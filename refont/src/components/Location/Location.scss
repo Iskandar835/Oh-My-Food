@@ -4,6 +4,7 @@
 
 .location-city {
    @include flexCenter;
+   position: relative;
    gap: 17px;
    color: $tertiary-bg-color;
    background-color: $location-bg-color;

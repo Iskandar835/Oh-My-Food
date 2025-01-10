@@ -2,7 +2,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route } from "react-router";
 import "./utils/globalStyles.scss";
-import Homepage from "./pages/Homepage";
+import Homepage from "./pages/Homepage/Homepage";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Restaurants from "./pages/Restaurants";
