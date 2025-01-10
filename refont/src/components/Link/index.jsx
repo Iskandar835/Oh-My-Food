@@ -1,5 +1,5 @@
 /* eslint-disable react-refresh/only-export-components */
-import "./Link.scss";
+import "./style.scss";
 import PropTypes from "prop-types";
 
 export const LINK_TYPES = {

@@ -1,6 +1,6 @@
-import "./Homepage.scss";
-import Button from "../../components/Button/Button";
-import Location from "../../components/Location/Location";
+import "./style.scss";
+import Button from "../../components/Button";
+import Location from "../../components/Location";
 
 function Homepage() {
    return (

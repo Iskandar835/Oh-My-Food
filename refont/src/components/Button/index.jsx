@@ -1,4 +1,4 @@
-import "./Button.scss";
+import "./style.scss";
 import PropTypes from "prop-types";
 
 function Button({ onclick, className, content }) {

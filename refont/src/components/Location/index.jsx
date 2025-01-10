@@ -1,4 +1,4 @@
-import "./Location.scss";
+import "./style.scss";
 import PropTypes from "prop-types";
 
 function Location({ content }) {

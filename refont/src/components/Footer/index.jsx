@@ -1,5 +1,5 @@
-import "./Footer.scss";
-import Link, { LINK_TYPES } from "../Link/Link";
+import "./style.scss";
+import Link, { LINK_TYPES } from "../Link";
 
 function Footer() {
    return (
