@@ -1,6 +1,8 @@
 import "./style.scss";
 import Button from "../../components/Button";
 import Location from "../../components/Location";
+import ExplanationCard from "../../components/ExplanationCard";
+import data from "../../data/friendlyUse.json";
 
 function Homepage() {
    return (
@@ -19,6 +21,19 @@ function Homepage() {
                   content={"Explorer nos restaurants"}
                   className={"btn btn__explore"}
                />
+            </div>
+         </section>
+         <section className="functioning">
+            <h2>Fonctionnement</h2>
+            <div className="functioning__explanation-cards">
+               {data.functioning.map((item) => (
+                  <ExplanationCard
+                     key={item.id}
+                     pellet={item.id}
+                     icon={item.icon}
+                     content={item.title}
+                  />
+               ))}
             </div>
          </section>
       </main>
