@@ -32,6 +32,15 @@
    }
 }
 
+.restaurants {
+   padding: 35px 20px 65px 20px;
+   background-color: $first-bg-color;
+   &-cards-gang {
+      @include flexColumn;
+      gap: 18px;
+   }
+}
+
 //**********     MEDIA QUERIES     **********
 
 @include media.tabs {
@@ -41,6 +50,37 @@
          @include flexRow;
          gap: 30px;
       }
+   }
+   .restaurants {
+      padding: 10px 100px 30px 100px;
+      h2 {
+         margin-bottom: 28px;
+      }
+   }
+   .restaurants-cards-gang {
+      display: flex;
+      gap: 50px;
+   }
+}
+
+@include media.desktop {
+   .functioning {
+      padding: 50px 180px 50px 180px;
+      &__explanation-cards {
+         @include flexRow;
+         gap: 40px;
+      }
+   }
+   .restaurants {
+      padding: 10px 175px 30px 175px;
+      h2 {
+         margin-bottom: 28px;
+      }
+   }
+
+   .restaurants-cards-gang {
+      display: flex;
+      gap: 50px;
    }
 }
 
@@ -52,16 +92,6 @@
       }
       p {
          margin: 30px 0;
-      }
-   }
-}
-
-@include media.desktop {
-   .functioning {
-      padding: 50px 180px 50px 180px;
-      &__explanation-cards {
-         @include flexRow;
-         gap: 40px;
       }
    }
 }

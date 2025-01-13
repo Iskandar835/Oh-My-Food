@@ -1,6 +1,7 @@
 [
    {
       "id": 1,
+      "new": true,
       "name": "La palette du goût",
       "location": "Ménilmontant",
       "picture": {
@@ -61,6 +62,7 @@
    },
    {
       "id": 2,
+      "new": true,
       "name": "La note enchantée",
       "location": "Charonne",
       "picture": {
@@ -126,6 +128,7 @@
    },
    {
       "id": 3,
+      "new": false,
       "name": "À la française",
       "location": "Cité Rouge",
       "picture": {
@@ -186,6 +189,7 @@
    },
    {
       "id": 4,
+      "new": false,
       "name": "Le délice des sens",
       "location": "Folie-Méricourt",
       "picture": {

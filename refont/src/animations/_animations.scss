@@ -55,13 +55,13 @@
 //** heart favorite button **
 
 @mixin heartButton {
-   cursor: pointer;
+   opacity: 0;
    color: transparent;
    background: $button-bg-color;
    background-clip: text;
    -webkit-background-clip: text;
-   opacity: 0;
    transition: all 300ms;
+   cursor: pointer;
    &:hover {
       opacity: 1;
       animation: heartPulse 0.8s;

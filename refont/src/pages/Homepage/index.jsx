@@ -36,6 +36,10 @@ function Homepage() {
                ))}
             </div>
          </section>
+         <section className="Restaurants">
+            <h2>Restaurants</h2>
+            <div className="restaurants-cards-gang"></div>
+         </section>
       </main>
    );
 }

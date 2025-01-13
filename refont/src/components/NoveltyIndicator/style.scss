@@ -1,0 +1,17 @@
+@use "../../utils/mixins" as *;
+@use "../../utils/variables" as *;
+
+.new-restaurant {
+   // revoir position car il etait adapter avec un row reverse
+   @include flexCenter;
+   position: absolute;
+   z-index: 1;
+   width: 80px;
+   height: 29px;
+   margin: 12px;
+   font-size: 14px;
+   font-weight: 500;
+   color: $new-color;
+   background-color: $tertiary-color;
+   border-radius: 2px;
+}
