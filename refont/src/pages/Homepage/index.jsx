@@ -1,8 +1,10 @@
 import "./style.scss";
-import Button from "../../components/Button";
 import Location from "../../components/Location";
-import ExplanationCard from "../../components/ExplanationCard";
+import Button from "../../components/Button";
 import data from "../../data/friendlyUse.json";
+import ExplanationCard from "../../components/ExplanationCard";
+import restaurantsData from "../../data/restaurants.json";
+import RestaurantCard from "../../components/RestaurantCard";
 
 function Homepage() {
    return (
@@ -36,9 +38,22 @@ function Homepage() {
                ))}
             </div>
          </section>
-         <section className="Restaurants">
+         <section className="restaurants">
             <h2>Restaurants</h2>
-            <div className="restaurants-cards-gang"></div>
+            <div className="restaurants__cards">
+               {restaurantsData.map((restaurant) => (
+                  <RestaurantCard
+                     key={restaurant.id}
+                     to={"/restaurants"}
+                     isNew={restaurant.new}
+                     source={restaurant.picture?.path}
+                     alt={restaurant.picture?.alt}
+                     title={restaurant.name}
+                     subtitle={restaurant.location}
+                     canLike={true}
+                  />
+               ))}
+            </div>
          </section>
       </main>
    );

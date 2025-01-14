@@ -1,5 +1,5 @@
-@use "../../utils/mixins" as *;
 @use "../../utils/variables" as *;
+@use "../../utils/mixins" as *;
 @use "../../utils/breakpoints" as media;
 
 .explore {
@@ -35,13 +35,14 @@
 .restaurants {
    padding: 35px 20px 65px 20px;
    background-color: $first-bg-color;
-   &-cards-gang {
-      @include flexColumn;
+   &__cards {
+      display: grid;
+      grid-template-rows: repeat(4, 1fr);
       gap: 18px;
    }
 }
 
-//**********     MEDIA QUERIES     **********
+// **********     MEDIA QUERIES     **********
 
 @include media.tabs {
    .functioning {
@@ -51,15 +52,31 @@
          gap: 30px;
       }
    }
+
    .restaurants {
       padding: 10px 100px 30px 100px;
+   }
+}
+
+@include media.tabsAndDesktop {
+   .explore {
+      padding: 30px 20px 30px 20px;
+      h1 {
+         font-size: 40px;
+      }
+      p {
+         margin: 30px 0;
+      }
+   }
+   .restaurants {
       h2 {
          margin-bottom: 28px;
       }
-   }
-   .restaurants-cards-gang {
-      display: flex;
-      gap: 50px;
+      &__cards {
+         grid-template-columns: 1fr 1fr;
+         grid-template-rows: repeat(2, 1fr);
+         gap: 50px 100px;
+      }
    }
 }
 
@@ -73,25 +90,5 @@
    }
    .restaurants {
       padding: 10px 175px 30px 175px;
-      h2 {
-         margin-bottom: 28px;
-      }
-   }
-
-   .restaurants-cards-gang {
-      display: flex;
-      gap: 50px;
-   }
-}
-
-@include media.tabsAndDesktop {
-   .explore {
-      padding: 30px 20px 30px 20px;
-      h1 {
-         font-size: 40px;
-      }
-      p {
-         margin: 30px 0;
-      }
    }
 }
