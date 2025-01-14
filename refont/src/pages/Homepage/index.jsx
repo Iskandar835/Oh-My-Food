@@ -44,7 +44,7 @@ function Homepage() {
                {restaurantsData.map((restaurant) => (
                   <RestaurantCard
                      key={restaurant.id}
-                     to={"/restaurants"}
+                     to={`/restaurants/${restaurant.id}`}
                      isNew={restaurant.new}
                      source={restaurant.picture?.path}
                      alt={restaurant.picture?.alt}
