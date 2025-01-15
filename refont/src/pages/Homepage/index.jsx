@@ -8,6 +8,7 @@ import RestaurantCard from "../../components/RestaurantCard";
 
 function Homepage() {
    return (
+      // mettre le loader ici ou en first child de main
       <main>
          <div>
             <Location content={"Paris, Belleville"} />
