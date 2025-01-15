@@ -1,6 +1,5 @@
 //** all useful mixins for mobile and desktop, for homepage and restaurant pages **
-// Voir si on les utilisera toute, il y a peut certaine qui ne seront pas utiliser ou
-// que l'on utilisera pas car elle ne respecte pas le DRY.
+
 @mixin flexColumn {
    display: flex;
    flex-direction: column;
@@ -9,11 +8,6 @@
 @mixin flexRow {
    display: flex;
    flex-direction: row;
-}
-
-@mixin rowReverse {
-   display: flex;
-   flex-direction: row-reverse;
 }
 
 @mixin flexCenter {
@@ -33,12 +27,7 @@
 }
 
 @mixin hiddenEllipsis {
-   overflow: hidden;
    white-space: nowrap;
    text-overflow: ellipsis;
-}
-
-@mixin gridCenter {
-   display: grid;
-   place-items: center;
+   overflow: hidden;
 }

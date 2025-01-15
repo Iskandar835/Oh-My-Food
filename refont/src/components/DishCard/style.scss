@@ -1,0 +1,58 @@
+@use "../../utils/variables" as *;
+@use "../../utils/mixins" as *;
+
+.dishCard__content {
+   display: flex;
+   background: $secondary-body-color;
+   border-radius: 15px;
+   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.089);
+   overflow: hidden;
+   cursor: pointer;
+   &--text {
+      padding: 13px 0 13px 16px;
+      @include hiddenEllipsis;
+      h3 {
+         margin: 0;
+         font-size: 18px;
+         font-weight: 500;
+         @include hiddenEllipsis;
+      }
+      p {
+         margin: 0;
+         font-size: 15px;
+         font-weight: 300;
+         @include hiddenEllipsis;
+      }
+   }
+   &--price {
+      display: flex;
+      align-items: flex-end;
+      margin-left: auto;
+      padding: 13px 16px 13px 10px;
+      font-size: 15px;
+      font-weight: 700;
+      color: $tertiary-bg-color;
+   }
+   &--check {
+      @include flexCenter;
+      width: 64px;
+      margin-right: -64px;
+      background-color: $tertiary-color;
+      transition: margin-right 350ms ease-in-out;
+      i {
+         @include flexCenter;
+         width: 18px;
+         height: 18px;
+         padding: 2px;
+         font-size: 14px;
+         color: $tertiary-color;
+         background-color: $secondary-body-color;
+         border-radius: 50px;
+      }
+   }
+   &:hover {
+      .dishCard__content--check {
+         margin: 0;
+      }
+   }
+}

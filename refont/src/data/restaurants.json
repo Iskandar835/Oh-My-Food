@@ -8,54 +8,63 @@
          "path": "/assets/la-palette-du-goût.jpg",
          "alt": "Image du restaurant la palette du goût"
       },
-      "entries": [
+      "starters": [
          {
             "id": "1",
-            "name": "Fricassée d'escargot au piment d'Espelette",
+            "base": "Fricassée d'escargot",
+            "garnish": "Au piment d'Espelette",
             "price": 25
          },
          {
             "id": "2",
-            "name": "Foie gras de canard mi-cuit et ses copeaux de truffe noire",
+            "base": "Foie gras de canard mi-cuit",
+            "garnish": "Et ses copeaux de truffe noire",
             "price": 35
          },
          {
             "id": "3",
-            "name": "Œuf au plat assaisonné à la truffe sur lit de caviar",
+            "base": "Œuf au plat",
+            "garnish": "Assaisonné à la truffe sur lit de caviar",
             "price": 20
          }
       ],
       "dishes": [
          {
             "id": "1",
-            "name": "Filet de bœuf aux herbes accompagné de sa ribambelle de légumes",
+            "base": "Filet de bœuf aux herbes",
+            "garnish": "Accompagné de sa ribambelle de légumes",
             "price": 40
          },
          {
             "id": "2",
-            "name": "Parmentier de queue de bœuf à la truffe noire sur sa purée de panais",
+            "base": "Parmentier de queue de bœuf",
+            "garnish": "À la truffe noire sur sa purée de panais",
             "price": 35
          },
          {
             "id": "3",
-            "name": "Filet de turbot aux agrumes",
+            "base": "Filet de turbot",
+            "garnish": "Aux agrumes",
             "price": 44
          }
       ],
       "desserts": [
          {
             "id": "1",
-            "name": "Paris-Brest revisité",
+            "base": "Paris-Brest",
+            "garnish": "Revisité",
             "price": 18
          },
          {
             "id": "2",
-            "name": "Macaron au chocolat d'exception et glace à la vanille de Madagascar",
+            "base": "Macaron au chocolat d'exception",
+            "garnish": "Et glace à la vanille de Madagascar",
             "price": 22
          },
          {
             "id": "3",
-            "name": "Mousse au chocolat au piment d'Espelette et à la truffe noire",
+            "base": "Mousse au chocolat",
+            "garnish": "Au piment d'Espelette et à la truffe noire",
             "price": 23
          }
       ]
@@ -69,59 +78,69 @@
          "path": "/assets/la-note-enchantée.jpg",
          "alt": "Image du restaurant la note enchantée"
       },
-      "entries": [
+      "starters": [
          {
             "id": "1",
-            "name": "Ravioles de foie gras accompagnées de leur crème à la truffe",
+            "base": "Ravioles de foie gras",
+            "garnish": "Accompagnées de leur crème à la truffe",
             "price": 25
          },
          {
             "id": "2",
-            "name": "Caviar osciètre sur blini à la farine de blé noir",
+            "base": "Caviar osciètre",
+            "garnish": "Sur blini à la farine de blé noir",
             "price": 35
          },
          {
             "id": "3",
-            "name": "Homard et espuma de potiron marinés aux zestes d'orange",
+            "base": "Homard et espuma de potiron",
+            "garnish": "Marinés aux zestes d'orange",
             "price": 20
          },
          {
             "id": "4",
-            "name": "Foie gras de canard cuit entier confiture de figue et pain toasté",
+            "base": "Foie gras de canard cuit entier",
+            "garnish": "Confiture de figue et pain toasté",
             "price": 35
          }
       ],
       "dishes": [
          {
             "id": "1",
-            "name": "Noix de coquilles Saint-Jacques sur lit de purée de céleri-rave",
+            "base": "Noix de coquilles Saint-Jacques",
+            "garnish": "Sur lit de purée de céleri-rave",
             "price": 40
          },
          {
             "id": "2",
-            "name": "Langoustine poêlée purée de patate douce",
+            "base": "Langoustine poêlée",
+            "garnish": "Purée de patate douce",
             "price": 35
          },
          {
             "id": "3",
-            "name": "Mijoté de queue de bœuf et riz sauvage aux zestes de citron",
+            "base": "Mijoté de queue de bœuf",
+            "garnish": "Et riz sauvage aux zestes de citron",
             "price": 44
          }
       ],
       "desserts": [
          {
             "id": "1",
-            "name": "Macaron noisette et chocolat glace au caramel brun et sel de Guérande",
+            "base": "Macaron noisette et chocolat",
+            "garnish": "Glace au caramel brun et sel de Guérande",
             "price": 18
          },
          {
             "id": "2",
-            "name": "Baba au rhum revisité avec son coulis de citron",
+            "base": "Baba au rhum revisité",
+            "garnish": "Avec son coulis de citron",
             "price": 22
          },
          {
             "id": "3",
-            "name": "Tarte au citron meringuée déstructurée",
+            "base": "Tarte au citron meringuée",
+            "garnish": "Déstructurée",
             "price": 23
          }
       ]
@@ -135,54 +154,63 @@
          "path": "/assets/à-la-française.jpg",
          "alt": "Image du restaurant à la française"
       },
-      "entries": [
+      "starters": [
          {
             "id": "1",
-            "name": "Tartare de poulpe acidulé aux zestes d'orange",
+            "base": "Tartare de poulpe acidulé",
+            "garnish": "Aux zestes d'orange",
             "price": 25
          },
          {
             "id": "2",
-            "name": "Velouté de légumes d'antan carotte, panais, topinambour",
+            "base": "Velouté de légumes d'antan",
+            "garnish": "Carotte, panais, topinambour",
             "price": 35
          },
          {
             "id": "3",
-            "name": "Soupe à l'oignon revisitée",
+            "base": "Soupe à l'oignon",
+            "garnish": "Revisitée",
             "price": 20
          }
       ],
       "dishes": [
          {
             "id": "1",
-            "name": "Coquilles Saint-Jacques accompagnées d'une purée de panais",
+            "base": "Coquilles Saint-Jacques",
+            "garnish": "Accompagnées d'une purée de panais",
             "price": 40
          },
          {
             "id": "2",
-            "name": "Magret de canard et parmentier de pommes de terre",
+            "base": "Magret de canard",
+            "garnish": "Et parmentier de pommes de terre",
             "price": 35
          },
          {
             "id": "3",
-            "name": "Pigeonneau d’Ille-et-Vilaine sur son lit de gnocchis aux légumes",
+            "base": "Pigeonneau d’Ille-et-Vilaine",
+            "garnish": "Sur son lit de gnocchis aux légumes",
             "price": 44
          }
       ],
       "desserts": [
          {
             "id": "1",
-            "name": "Pétales de violettes glacés et purée de noisettes",
+            "base": "Pétales de violettes glacés",
+            "garnish": "Et purée de noisettes",
             "price": 18
          },
          {
             "id": "2",
-            "name": "Fondant au chocolat revisité",
+            "base": "Fondant au chocolat",
+            "garnish": "Revisité",
             "price": 22
          },
          {
             "id": "3",
-            "name": "Millefeuille croustillant myrtilles et pâte d’amande",
+            "base": "Millefeuille croustillant",
+            "garnish": "Myrtilles et pâte d’amande",
             "price": 23
          }
       ]
@@ -196,54 +224,63 @@
          "path": "/assets/le-délice-des-sens.jpg",
          "alt": "Image du restaurant le délice des sens"
       },
-      "entries": [
+      "starters": [
          {
             "id": "1",
-            "name": "Tartare de thon assaisonné au yuzu",
+            "base": "Tartare de thon",
+            "garnish": "Assaisonné au yuzu",
             "price": 25
          },
          {
             "id": "2",
-            "name": "Bouchée de homard croustillant et sa farandole de petits légumes",
+            "base": "Bouchée de homard croustillant",
+            "garnish": "Et sa farandole de petits légumes",
             "price": 35
          },
          {
             "id": "3",
-            "name": "Velouté de cèpes aux truffes",
+            "base": "Velouté de cèpes",
+            "garnish": "Aux truffes",
             "price": 20
          }
       ],
       "dishes": [
          {
             "id": "1",
-            "name": "Poulet rôti aux herbes de Provence et sa crème de truffe",
+            "base": "Poulet rôti aux herbes de Provence ",
+            "garnish": "Et sa crème de truffe",
             "price": 40
          },
          {
             "id": "2",
-            "name": "Langouste rôtie et ses légumes de saison",
+            "base": "Langouste rôtie",
+            "garnish": "Et ses légumes de saison",
             "price": 35
          },
          {
             "id": "3",
-            "name": "Côte de bœuf Angus et sa purée de panais",
+            "base": "Côte de bœuf Angus",
+            "garnish": "Et sa purée de panais",
             "price": 44
          }
       ],
       "desserts": [
          {
             "id": "1",
-            "name": "Farandole de desserts du chef",
+            "base": "Farandole de desserts",
+            "garnish": "Du chef",
             "price": 18
          },
          {
             "id": "2",
-            "name": "Crème brulée revisitée",
+            "base": "Crème brulée",
+            "garnish": "Revisitée",
             "price": 22
          },
          {
             "id": "3",
-            "name": "Tiramisu à la noisette",
+            "base": "Tiramisu",
+            "garnish": "À la noisette",
             "price": 23
          }
       ]

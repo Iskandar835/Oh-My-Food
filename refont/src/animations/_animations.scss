@@ -57,30 +57,3 @@
 //** delayed appearance of menus **
 
 //** dish checked animation **
-
-@mixin dishChecked {
-   .dish__cards-check {
-      @include gridCenter;
-      width: 4rem;
-      flex-shrink: 0;
-      margin-right: -4rem;
-      background-color: $tertiary-color;
-      border-radius: 0 15px 15px 0;
-      transition: margin-right 400ms;
-      i {
-         @include gridCenter;
-         width: 18px;
-         height: 18px;
-         padding: 2px;
-         font-size: 14px;
-         color: $tertiary-color;
-         background-color: $secondary-body-color;
-         border-radius: 50px;
-      }
-   }
-   &:hover {
-      .dish__cards-check {
-         margin: 0;
-      }
-   }
-}
