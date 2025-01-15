@@ -1,6 +1,6 @@
 @use "../../utils/variables" as *;
 @use "../../utils/mixins" as *;
-@use "../../animations/animations" as *;
+@use "../../utils/breakpoints" as media;
 
 .btn {
    all: unset;
@@ -11,11 +11,25 @@
    background: $button-bg-color;
    border-radius: 50px;
    cursor: pointer;
-   @include button;
+   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+   transition: opacity 0.5s ease, box-shadow 0.5s ease;
+   &:active {
+      opacity: 0.8;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+   }
    &__explore {
       width: 188px;
    }
    &__order {
       width: 155px;
+   }
+}
+
+@include media.desktop {
+   .btn {
+      &:hover {
+         opacity: 0.8;
+         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+      }
    }
 }

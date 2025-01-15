@@ -1,0 +1,40 @@
+@use "../../utils/mixins" as *;
+@use "../../utils/variables" as *;
+
+@keyframes spinIcon {
+   to {
+      transform: rotate(540deg);
+   }
+}
+@keyframes loaderOut {
+   from {
+      transform: scale(1);
+   }
+   to {
+      transform: scale(0);
+   }
+}
+
+.loader {
+   @include flexCenter;
+   position: fixed;
+   z-index: 3;
+   height: 100vh;
+   inset: 0;
+   background: linear-gradient(
+      $secondary-bg-color 80%,
+      $secondary-color,
+      $primary-color
+   );
+   opacity: 0.9;
+   animation: loaderOut 0.2s forwards;
+   animation-delay: 1.5s;
+   transform-origin: bottom;
+   i {
+      animation: spinIcon 1.5s forwards;
+   }
+   i {
+      font-size: 40px;
+      color: $tertiary-color;
+   }
+}

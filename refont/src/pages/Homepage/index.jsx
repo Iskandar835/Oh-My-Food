@@ -1,15 +1,16 @@
 import "./style.scss";
+import Loader from "../../components/Loader";
 import Location from "../../components/Location";
 import Button from "../../components/Button";
-import data from "../../data/friendlyUse.json";
+import dataFriendly from "../../data/friendlyUse.json";
 import ExplanationCard from "../../components/ExplanationCard";
 import restaurantsData from "../../data/restaurants.json";
 import RestaurantCard from "../../components/RestaurantCard";
 
 function Homepage() {
    return (
-      // mettre le loader ici ou en first child de main
       <main>
+         <Loader />
          <div>
             <Location content={"Paris, Belleville"} />
          </div>
@@ -29,7 +30,7 @@ function Homepage() {
          <section className="functioning">
             <h2>Fonctionnement</h2>
             <div className="functioning__explanation-cards">
-               {data.functioning.map((item) => (
+               {dataFriendly.functioning.map((item) => (
                   <ExplanationCard
                      key={item.id}
                      pellet={item.id}
