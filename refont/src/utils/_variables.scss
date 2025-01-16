@@ -13,33 +13,7 @@ $icon-color: #7e7e7e;
 $new-color: #008766;
 $button-bg-color: linear-gradient(#ff79da, #9356dc);
 $location-bg-color: #eaeaea;
-// toutes les couleurs sont nettoyer
 
-//*** NETTOYAGE : ****
-// new
-// Tout les titres on garde la taille qui est indiquer ci-dessous.
-// Cependant comme on utilise react on reglera directement la font size du titre
-// dans le composant avec les media queries.
-
-// a arranger :
-$homepage-h1-and-h2-size: 24px;
-$homepage-h1-and-h2-weight: 700;
-$restaurant-page-h1-size: 28px;
-$restaurant-page-h1-weight: 400;
-$card-title-font-size: 18px;
-$card-title-font-weight: 700;
-$card-subtitle-font-size: 17px;
-$card-subtitle-font-weight: 300;
-$nouveau-font-size: 14px;
-$nouveau-font-weight: 500;
-$footer-title-font-size: 18px;
-$footer-subtitle-font-size: 16px;
-$weight-footer-link-icon: 500;
-
-// a supprimer
-$restaurant-card-title-weight: 500;
-$restaurant-card-subtitle-size: 15px;
-$price-font-size: 15px;
-$price-font-weight: 700;
-$menu-type-font-size: 16px;
-$menu-type-font-weight: 300;
+// **** ALL FONT STYLE ****
+$thin-title-weight: 300;
+$medium-title-weight: 500;

@@ -12,7 +12,7 @@
    p {
       margin: 15px 0 30px 0;
       font-size: 18px;
-      font-weight: 300;
+      font-weight: $thin-title-weight;
       color: $tertiary-bg-color;
    }
    &__btn-container {
@@ -22,23 +22,21 @@
 
 .functioning {
    padding: 50px 20px 70px 20px;
-   h2 {
-      margin: 0 0 30px 0;
-   }
    &__explanation-cards {
       @include flexColumn;
-      margin-left: 13px;
+      margin: 30px 0 0 13px;
       gap: 23px;
    }
 }
 
 .restaurants {
-   padding: 35px 20px 65px 20px;
+   padding: 55px 20px 65px 20px;
    background-color: $first-bg-color;
    &__cards {
       display: grid;
       grid-template-rows: repeat(4, 1fr);
       gap: 18px;
+      margin-top: 20px;
    }
 }
 
@@ -54,7 +52,7 @@
    }
 
    .restaurants {
-      padding: 10px 100px 30px 100px;
+      padding: 30px 100px 30px 100px;
    }
 }
 
@@ -68,15 +66,12 @@
          margin: 30px 0;
       }
    }
-   .restaurants {
-      h2 {
-         margin-bottom: 28px;
-      }
-      &__cards {
-         grid-template-columns: 1fr 1fr;
-         grid-template-rows: repeat(2, 1fr);
-         gap: 50px 100px;
-      }
+
+   .restaurants__cards {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(2, 1fr);
+      gap: 50px 100px;
+      margin-top: 28px;
    }
 }
 
@@ -89,6 +84,6 @@
       }
    }
    .restaurants {
-      padding: 10px 175px 30px 175px;
+      padding: 30px 175px 30px 175px;
    }
 }

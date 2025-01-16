@@ -34,14 +34,13 @@
       gap: 3px;
       color: $first-body-color;
       h3 {
-         margin: 0;
          font-size: 18px;
-         font-weight: 700;
+         font-weight: $medium-title-weight;
       }
       p {
          margin: 0;
          font-size: 17px;
-         font-weight: 300;
+         font-weight: $thin-title-weight;
       }
    }
    &__liked {
