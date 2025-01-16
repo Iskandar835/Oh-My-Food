@@ -35,7 +35,7 @@
    }
    &--check {
       @include flexCenter;
-      width: 64px;
+      min-width: 64px;
       margin-right: -64px;
       background-color: $tertiary-color;
       transition: margin-right 350ms ease-in-out;
@@ -50,9 +50,10 @@
          border-radius: 50px;
       }
    }
-   &:hover {
-      .dishCard__content--check {
-         margin: 0;
-      }
+}
+
+.active {
+   .dishCard__content--check {
+      margin: 0;
    }
 }
