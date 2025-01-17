@@ -1,0 +1,12 @@
+{
+    "liveSassCompile.settings.formats": [
+
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "/assets/css",
+        }
+    ]
+}
+
+//** path to link sass files to css files present in assets  **
