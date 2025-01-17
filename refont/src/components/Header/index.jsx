@@ -9,14 +9,14 @@ function Header() {
       <header className="header">
          {checkLocation && (
             <div className="header__icon-container">
-               <Link to="/">
+               <Link to="/Oh-My-Food">
                   <i className="fa-solid fa-arrow-left"></i>
                </Link>
             </div>
          )}
          <img
             className="header__logo"
-            src="/assets/ohmyfood@2x.svg"
+            src={`${import.meta.env.BASE_URL}/assets/ohmyfood@2x.svg`}
             alt="logo de oh-my-food"
          />
       </header>

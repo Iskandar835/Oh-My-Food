@@ -14,7 +14,7 @@ function RestaurantCard({ to, isNew, source, alt, title, subtitle, canLike }) {
                      <NoveltyIndicator />
                   </div>
                )}
-               <img src={source} alt={alt} />
+               <img src={`${import.meta.env.BASE_URL}` + source} alt={alt} />
                <div className="article__content">
                   <div className="article__text">
                      <h3>{title}</h3>

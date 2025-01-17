@@ -12,7 +12,10 @@ function Restaurants() {
    return (
       <main>
          <div className="restaurant-picture">
-            <img src={restaurant.picture.path} alt={restaurant.picture.alt} />
+            <img
+               src={`${import.meta.env.BASE_URL}` + restaurant.picture.path}
+               alt={restaurant.picture.alt}
+            />
          </div>
          <div className="responsive-container">
             <section className="menu">
